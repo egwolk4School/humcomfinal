@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RinDex | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/RinDexIcon copy.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer src="script.js"></script>
+    <script src='https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" integrity="sha512-aNMyYYxdIxIaot0Y1/PLuEu3eipGCmsEUBrUq+7aVyPGMFH8z0eTP0tkqAvv34fzN6z+201d3T8HPb1svWSKHQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+        integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+        crossorigin="anonymous"></script>
+    <script defer async src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
+
+    
+</head>
+<body>
+    
+    <div class="headercont">
+        <div class="header_b4" ></div>
+    </div>
+    
+    <header class="header" id="header" >
+        <div class="nav container">
+            <div class="nav_data">
+               <a href="index.html"><img class="logo" alt="logo" src="img/RinDexLogo copy.png"></a> 
+                <div class="nav_toggle" id="nav__toggle">
+                    <i class="ri-menu-line burger"></i>
+                    <i class="ri-close-line close"></i>
+                    
+                </div>
+               
+            </div>
+            <div class="menu" id="nav-menu">
+                
+
+                <ul class="nav_links">
+                    
+                    <li><a href="index.html" class="navlink navShuffle">Home</a></li>
+                    <li><a href="portfolio.html" class="navlink navShuffle">Portfolio</a></li>
+                    <li><a href="contact.html" class="navlink navShuffle">Contact</a></li>
+                    <li class="dropdown" >
+                        <div class="navlinka"  id="about_toggle" > 
+                           <a class="navShuffle">About</a><i class="ri-arrow-down-s-line dropdown_arrow" id="arrow"></i>
+                        </div>
+                        
+                        <ul class="dropdown_menu" id="sub_menu">
+                            <li><a href="about_website.html" class="dropdown_link navShuffle" id="dropdown_link ">Website</a></li>
+                            <li><a href="about_dev.html" class="dropdown_link navShuffle" >Dev</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                 <div class="button">
+                    <a href="donate.html" class="donate " id="butn">Donate</a>
+                 </div>
+                    
+            </div>
+        </div>
+       
+    </header>
+    
+
+    <div class="container1">
+        <div class="home1">
+            <div class="home1text">
+                <h2 >Welcome to</h2>
+                <h1 class="shuffle">RINDeX</h1>
+                <h3>Erin’s Creative Digital Public Archive. Open source codes, Graphic Design, Video editing, and Artbook Sketches<a>(Full illustrations soon!...Maybe)</a></h3>
+                <a class="portBut" href="portfolio.html">Browse Portfolio</a>
+                <p >Before using the resources, please read the <a  href="legal.html">Copyright Policy</a></p> 
+            </div>
+            <div class="home1graphic">
+                <img src="img/pic1.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="shadowContainer">
+        <div class="carouselShadow"></div>
+    </div>
+    <div class="carouselHome" id="carouselContainer">
+        <div class="left">
+            <div class="leftContent">
+                <div class="carouselHomeTitleLeft">What I do?</div>
+                <div class="carouselIcons">
+                    <div class="icondiv blu"><i class="ri-code-s-slash-line carouselIcon"></i></div>
+                    <div class="icondiv blu"><i class="ri-color-filter-line carouselIcon"></i></div>
+                    <div class="icondiv blu"><i class="ri-film-fill carouselIcon"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="rightContent">
+                <div class="rightItem">
+                    <h1>Codes, Websites, & Programs</h1>
+                    <p>As an aspiring game/web developer and software engineer, I have built and accumulated a couple fun projects through out my days in university. I hope to inspire others with my works and I also wish to continue building my portfolio and skills.</p>
+                </div>
+                <div class="rightItem">
+                    <h1>Graphic Design & Art</h1>
+                    <p>I have always been enthusiastic about art. I have been recently getting into graphic design since it goes hand-in-hand with building websites and programs. As a result, it has also ignited my hobby in drawing so I also wanted to showcase it here.</p>
+                </div>
+                <div class="rightItem">
+                    <h1>Video Editing and Production</h1>
+                    <p>Ever since high school, I have been interested in video editing and production. I loved it so much that a part of me wanted to pursue film as a career before I discovered my passion for coding and computer science. I still have it as a hobby.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container1">
+        <div class="home1">
+            <div class="home1graphic2">
+                <img src="img/pic2.png" alt="">
+            </div>
+            <div class="home1text2">
+                <p >This Website</p>
+                <h1>This website is designed to help & inspire fellow CS students</h1>
+                
+                <h3>The works that I showcase on this website are open source and are free to be used by anyone as long as credit is provided. Essentially an “I help you, you help me” quid pro quo exchange :]</h3>
+                <a class="portBut" href="about_website.html">Learn More</a>
+                 
+            </div>
+            
+        </div>
+    </div>
+    <div class="container1">
+        <div class="home1">
+            <div class="home1text3">
+                <p >FAQ</p>
+                <h1>Frequently Asked Questions</h1>
+                <h3>Nobody actually asked these. I just need to put something here hahahahaha. But feel free to ask actual questions in the contact page!</h3>
+                <a class="portBut" href="contact.html">Contact</a>
+            </div>
+            <div class="faq">
+                <ul class="faq_ul">
+                  <li>
+                    <input type="checkbox" checked>
+                    <i class="ri-arrow-down-s-line"></i>
+                    <h2>Future Plans</h2>
+                    <p>So far, I have a couple plans and ideas I've thought about doing and building for future projects and possible experiences that will help me build a promising resume for my career further down the line.</p>
+                  </li>
+                  <li>
+                    <input type="checkbox" checked>
+                    <i class="ri-arrow-down-s-line"></i>
+                    <h2>Plan B</h2>
+                    <p>If push comes to shove, and this whole indie dev thing won't workout for me(still hoping for a better outcome of course), I will have my uni degree and future internships and hackathons to fallback on as a "safety-net" and work for the greedy corporate bigboys of silicone valley... probably.</p>
+                  </li>
+                  <li>
+                    <input type="checkbox" checked>
+                    <i class="ri-arrow-down-s-line"></i>
+                    <h2>Am I single</h2>
+                    <p>YES. Date me PLEASE. I AM DESPERATE FOR HUMAN CONNECTION. jkjk... unless?</p>
+                  </li>
+                  <li>
+                    <input type="checkbox" checked>
+                    <i class="ri-arrow-down-s-line"></i>
+                    <h2>Future Projects</h2>
+                    <p>Since I am still a beginner, I want to really master the basics and fundamentals. That way I can apply them to more versatile and experimetal projects soon. For now, I wish to recreate simple games, programs, and websites like: minesweeper, chess, tictactoe, etc.</p>
+                  </li>
+                  <li>
+                    <input type="checkbox" checked>
+                    <i class="ri-arrow-down-s-line"></i>
+                    <h2>Services</h2>
+                    <p>As of now, I am only planning to do personal projects since I am still trying to learn but also because I wish to build up my confidence in coding and development before taking on more professional and actual client based projects.</p>
+                  </li>
+                  <li>
+                    <input type="checkbox" checked>
+                    <i class="ri-arrow-down-s-line"></i>
+                    <h2>Arts and Design</h2>
+                    <p>I am by no means a pro at multimedia arts. I just have it as a hobby and an additional skill to hone along with coding and development.</p>
+                  </li>
+                </ul>
+              </div>
+            
+        </div>
+    </div>
+    
+    
+    
+    
+
+
+    
+    
+  
+    <button id="scroll-top-btn">
+        <i class="fa fa-angle-up"></i>
+    </button>
+    <div class="footcont">
+        <footer>
+            <div class="footer_content">
+                <div class="top">
+                    <img class="logo_footer" alt="logo" src="img/RinDexLogo copy.png">
+    
+                    <div class="foot_social">
+                        <a href="https://www.facebook.com/egwolk?lst=100004351207708%3A100004351207708%3A1706836342&eav=AfaJz4h5RZi_9wZ6r1SR78l3W-_RR2dqEeJmQNi6TgiZGz9UW4Ea_NPf-3uchwNljFM&paipv=0/" target="_blank"  class="icons"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/egwolk/?hl=en" target="_blank" class="icons"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.discordapp.com/users/757221998085799997"
+                        target="_blank" class="icons"><i class="fab fa-discord"></i></a>
+                        <a href="https://www.tiktok.com/@egwolk?is_from_webapp=1&sender_device=pc"  target="_blank" class="icons"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.youtube.com/@egwolk" target="_blank" class="icons"><i class="fab fa-youtube"></i></a>
+                        <a href="https://open.spotify.com/user/ny54x7vme5920ggf7z7z9rj0w?si=40ca4a85bc434717"  target="_blank"  class="icons"><i class="fab fa-spotify"></i></a>
+                        <a href="https://steamcommunity.com/id/egwolk" target="_blank"  class="icons"><i class="fab fa-steam-symbol"></i></a>
+                        <a href="mailto:erincovacha@gmail.com" target="_blank"  class="icons"><i class="fa-regular fa-envelope"></i></a>
+                    </div>
+                    <a href="donate.html" class="foot_donate">Donate</a>
+               
+                </div>
+                <div class="foot_cred">
+                    <p >Erin Drew C. Covacha &copy; 2024 RinDex. All rights reserved.</p>
+                    <a href="legal.html">Copyright Policy</a>
+                    <a class="text" href="legal.html">Privacy Policy</a>
+                </div>
+            </div>
+            
+    
+        </footer>
+    </div>
+
+    
+    <canvas class="canvas" id="canvas"></canvas>
+    
+    <script defer async>
+        const scrollUp = (function() {
+        const scrollTopBtn = document.querySelector("#scroll-top-btn");
+
+        window.addEventListener("scroll", function(){
+            const scrollTop = window.pageYOffset;
+            const height = window.innerHeight;
+            if(scrollTop > (height/1.5)){
+            scrollTopBtn.classList.add("visible");
+            } else {
+            scrollTopBtn.classList.remove("visible");
+            }
+        });
+        
+        scrollTopBtn.addEventListener("click", function(){
+            window.scrollTo({
+            top:0,
+            behavior:"smooth"
+            })
+        });
+        })();
+    </script>
+</body>
+</html>

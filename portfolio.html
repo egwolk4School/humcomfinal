@@ -1,0 +1,1650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RinDex | Portfolio</title>
+    <link rel="stylesheet" href="style.css">    
+    <link rel="icon" href="img/RinDexIcon copy.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" integrity="sha512-aNMyYYxdIxIaot0Y1/PLuEu3eipGCmsEUBrUq+7aVyPGMFH8z0eTP0tkqAvv34fzN6z+201d3T8HPb1svWSKHQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="prism.css">
+
+    
+</head>
+<body>
+
+
+    
+    
+    <div class="headercont">
+        <div class="header_b4" ></div>
+    </div>
+    
+    <header class="header" id="header" >
+        <div class="nav container">
+            <div class="nav_data">
+               <a href="index.html"><img class="logo" alt="logo" src="img/RinDexLogo copy.png"></a> 
+                <div class="nav_toggle" id="nav__toggle">
+                    <i class="ri-menu-line burger"></i>
+                    <i class="ri-close-line close"></i>
+                    
+                </div>
+               
+            </div>
+            <div class="menu" id="nav-menu">
+                
+
+                <ul class="nav_links">
+                    
+                    <li><a href="index.html" class="navlink navShuffle">Home</a></li>
+                    <li><a href="portfolio.html" class="navlink navShuffle">Portfolio</a></li>
+                    <li><a href="contact.html" class="navlink navShuffle">Contact</a></li>
+                    <li class="dropdown" >
+                        <div class="navlinka"  id="about_toggle" > 
+                           <a class="navShuffle">About</a><i class="ri-arrow-down-s-line dropdown_arrow" id="arrow"></i>
+                        </div>
+                        
+                        <ul class="dropdown_menu" id="sub_menu">
+                            <li><a href="about_website.html" class="dropdown_link navShuffle" id="dropdown_link ">Website</a></li>
+                            <li><a href="about_dev.html" class="dropdown_link navShuffle" >Dev</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                 <div class="button">
+                    <a href="donate.html" class="donate " id="butn">Donate</a>
+                 </div>
+                    
+            </div>
+        </div>
+       
+    </header>
+
+    <div class="portcontainer1" id="portconatiner1">
+        
+        <div class="shadowContainer">
+            <div class="portShadow"></div>
+        </div>
+        
+        <div class="portfolio" id="portfolio1">
+            <div class="button-group-wrap" id="filters">
+                <button onclick="allr()" data-filter="*">All</button>
+                <button onclick="progr()" data-filter=".prog">Programming</button>
+                <button onclick="gra()" data-filter=".grapDes">Graphic Design</button>
+                <button onclick="vide()" data-filter=".vidEd">Video Editing</button>
+            </div>
+
+            <div class="products">
+                <div class="backdrop"  id="blaur"></div>
+                
+                <div class="product_product">
+                    <div class="product box-item grapDes" data-category="grapDes">
+                        <img id="thumbnail1" class="thumbnail" data-img="img/imgs/1.jpg" alt="">
+                        <div class="product-info">
+                            <h1 class="title pTex item-name">Kaeya Alberich</h1>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <h4 class="short-desc pTex">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, laudantium.</h4>
+                            <div class="view popup-btn"><button>view</button></div>
+                        </div>
+                    </div>
+
+                   
+                    <div class="popup-view">
+                        <a class="closeer"><i class="fas fa-times close-btn"></i></a>
+                        <div class="popup-card">
+                          <div class="product-img">
+                            <img src="img/png/1.png" alt="">
+                          </div>
+                          <div class="popup-info">
+                            <h2>Kaeya Alberich</h2>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <p class="poopoo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                
+                <div class="product_product">
+                    <div class="product box-item grapDes" data-category="grapDes">
+                        <img id="thumbnail2" class="thumbnail" data-img="img/imgs/2.jpg" alt="">
+                        <div class="product-info">
+                            <h1 class="title pTex item-name">Diogenes</h1>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <h4 class="short-desc pTex">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, laudantium.</h4>
+                            <div class="view"><button>view</button></div>
+                        </div>
+                    </div>
+
+                     
+                    <div class="popup-view">
+                        <a class="closeer"><i class="fas fa-times close-btn"></i></a>
+                        <div class="popup-card">
+                          <div class="product-img">
+                            <img src="img/png/2.png" alt="">
+                          </div>
+                          <div class="popup-info">
+                            <h2>Diogenes</h2>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <p class="poopoo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                
+
+                <div class="product_product">
+                    <div class="product box-item grapDes" data-category="grapDes">
+                        <img id="thumbnail3" class="thumbnail" data-img="img/imgs/3.jpg" alt="">
+                        <div class="product-info">
+                            <h1 class="title pTex item-name">Asa Mitaka</h1>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <h4 class="short-desc pTex">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, laudantium.</h4>
+                            <div class="view"><button>view</button></div>
+                        </div>
+                    </div>
+
+                     
+                    <div class="popup-view">
+                        <a class="closeer"><i class="fas fa-times close-btn"></i></a>
+                        <div class="popup-card">
+                          <div class="product-img">
+                            <img src="img/png/3.png" alt="">
+                          </div>
+                          <div class="popup-info">
+                            <h2>Asa Mitaka</h2>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <p class="poopoo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                
+
+                <div class="product_product">
+                    <div class="product box-item grapDes" data-category="grapDes">
+                        <img id="thumbnail4" class="thumbnail" data-img="img/imgs/4.jpg" alt="">
+                        <div class="product-info">
+                            <h1 class="title pTex item-name">Tyler</h1>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <h4 class="short-desc pTex">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, laudantium.</h4>
+                            <div class="view"><button>view</button></div>
+                        </div>
+                    </div>
+
+                      
+                    <div class="popup-view">
+                        <a class="closeer"><i class="fas fa-times close-btn"></i></a>
+                        <div class="popup-card">
+                          <div class="product-img">
+                            <img src="img/png/4.png" alt="">
+                          </div>
+                          <div class="popup-info">
+                            <h2>Tyler, the Creator</h2>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <p class="poopoo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                
+
+                <div class="product_product">
+                    <div class="product box-item grapDes" data-category="grapDes">
+                        <img id="thumbnail5" class="thumbnail" data-img="img/imgs/5.jpg" alt="">
+                        <div class="product-info">
+                            <h1 class="title pTex item-name">Jolyne Cujoh</h1>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <h4 class="short-desc pTex">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, laudantium.</h4>
+                            <div class="view"><button>view</button></div>
+                        </div>
+                    </div>
+                     
+                    <div class="popup-view">
+                        <a class="closeer"><i class="fas fa-times close-btn"></i></a>
+                        <div class="popup-card">
+                          <div class="product-img">
+                            <img src="img/png/5.png" alt="">
+                          </div>
+                          <div class="popup-info">
+                            <h2>Jolyne Cujoh</h2>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <p class="poopoo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                
+
+                <div class="product_product">
+                    <div class="product box-item grapDes" data-category="grapDes">
+                        <img id="thumbnail6" class="thumbnail" data-img="img/imgs/6.jpg" alt="">
+                        <div class="product-info">
+                            <h1 class="title pTex item-name">Guts</h1>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <h4 class="short-desc pTex">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, laudantium.</h4>
+                            <div class="view"><button>view</button></div>
+                        </div>
+                    </div>
+                     
+                    <div class="popup-view">
+                        <a class="closeer"><i class="fas fa-times close-btn"></i></a>
+                        <div class="popup-card">
+                          <div class="product-img">
+                            <img src="img/png/6.png" alt="">
+                          </div>
+                          <div class="popup-info">
+                            <h2>Guts</h2>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <p class="poopoo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                
+
+                <div class="product_product">
+                    <div class="product box-item grapDes" data-category="grapDes">
+                        <img id="thumbnail7" class="thumbnail" data-img="img/imgs/7.jpg" alt="">
+                        <div class="product-info">
+                            <h1 class="title pTex item-name">Aurelius</h1>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <h4 class="short-desc pTex">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, laudantium.</h4>
+                            <div class="view"><button>view</button></div>
+                        </div>
+                    </div>
+                     
+                    <div class="popup-view">
+                        <a class="closeer"><i class="fas fa-times close-btn"></i></a>
+                        <div class="popup-card">
+                          <div class="product-img">
+                            <img src="img/png/7.png" alt="">
+                          </div>
+                          <div class="popup-info">
+                            <h2>Aurelius</h2>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <p class="poopoo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                </div>
+
+
+                <div class="product_product">
+                    <div class="product box-item grapDes" data-category="grapDes">
+                        <img id="thumbnail8" class="thumbnail" data-img="img/imgs/8.jpg" alt="">
+                        <div class="product-info">
+                            <h1 class="title pTex item-name">Seneca</h1>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <h4 class="short-desc pTex">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, laudantium.</h4>
+                            <div class="view"><button>view</button></div>
+                        </div>
+                    </div>
+                    <div class="popup-view">
+                        <a class="closeer"><i class="fas fa-times close-btn"></i></a>
+                        <div class="popup-card">
+                          <div class="product-img">
+                            <img src="img/png/8.png" alt="">
+                          </div>
+                          <div class="popup-info">
+                            <h2>Seneca</h2>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <p class="poopoo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                
+
+                <div class="product_product">
+                    <div class="product box-item grapDes" data-category="grapDes">
+                        <img id="thumbnail9" class="thumbnail" data-img="img/imgs/9.jpg" alt="">
+                        <div class="product-info">
+                            <h1 class="title pTex item-name">NewJeans1</h1>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <h4 class="short-desc pTex">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, laudantium.</h4>
+                            <div class="view"><button>view</button></div>
+                        </div>
+                    </div>
+
+                    <div class="popup-view">
+                        <a class="closeer"><i class="fas fa-times close-btn"></i></a>
+                        <div class="popup-card">
+                          <div class="product-img">
+                            <img src="img/png/9.png" alt="">
+                          </div>
+                          <div class="popup-info">
+                            <h2>NewJeans1</h2>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <p class="poopoo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+    
+                </div>
+                
+                <div class="product_product">
+                    <div class="product box-item grapDes" data-category="grapDes">
+                        <img id="thumbnail10" class="thumbnail" data-img="img/imgs/10.jpg" alt="">
+                        <div class="product-info">
+                            <h1 class="title pTex item-name">NewJeans2</h1>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <h4 class="short-desc pTex">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, laudantium.</h4>
+                            <div class="view"><button>view</button></div>
+                        </div>
+                    </div>
+                    <div class="popup-view">
+                        <a class="closeer"><i class="fas fa-times close-btn"></i></a>
+                        <div class="popup-card">
+                          <div class="product-img">
+                            <img src="img/png/10.png" alt="">
+                          </div>
+                          <div class="popup-info">
+                            <h2>NewJeans2</h2>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <p class="poopoo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                
+
+                <div class="product_product">
+                    <div class="product box-item grapDes" data-category="grapDes">
+                        <img id="thumbnail11" class="thumbnail" data-img="img/imgs/11.jpg" alt="">
+                        <div class="product-info">
+                            <h1 class="title pTex item-name">Logo1</h1>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <h4 class="short-desc pTex">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, laudantium.</h4>
+                            <div class="view"><button>view</button></div>
+                        </div>
+                    </div>
+                    <div class="popup-view">
+                        <a class="closeer"><i class="fas fa-times close-btn"></i></a>
+                        <div class="popup-card">
+                          <div class="product-img">
+                            <img src="img/png/11.png" alt="">
+                          </div>
+                          <div class="popup-info">
+                            <h2>Logo1</h2>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <p class="poopoo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                
+
+                <div class="product_product">
+                    <div class="product box-item grapDes" data-category="grapDes">
+                        <img id="thumbnail12" class="thumbnail" data-img="img/imgs/12.jpg" alt="">
+                        <div class="product-info">
+                            <h1 class="title pTex item-name">Lain</h1>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <h4 class="short-desc pTex">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, laudantium.</h4>
+                            <div class="view"><button>view</button></div>
+                        </div>
+                    </div>
+                    <div class="popup-view">
+                        <a class="closeer"><i class="fas fa-times close-btn"></i></a>
+                        <div class="popup-card">
+                          <div class="product-img">
+                            <img src="img/png/12.png" alt="">
+                          </div>
+                          <div class="popup-info">
+                            <h2>Lain</h2>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <p class="poopoo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                
+
+                <div class="product_product">
+                    <div class="product box-item grapDes" data-category="grapDes">
+                        <img id="thumbnail13" class="thumbnail" data-img="img/imgs/13.jpg" alt="">
+                        <div class="product-info">
+                            <h1 class="title pTex item-name">Spider Gwen</h1>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <h4 class="short-desc pTex">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, laudantium.</h4>
+                            <div class="view"><button>view</button></div>
+                        </div>
+                    </div>
+                    <div class="popup-view">
+                        <a class="closeer"><i class="fas fa-times close-btn"></i></a>
+                        <div class="popup-card">
+                          <div class="product-img">
+                            <img src="img/png/13.png" alt="">
+                          </div>
+                          <div class="popup-info">
+                            <h2>KSpider Gwen</h2>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <p class="poopoo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                </div>
+               
+
+                <div class="product_product">
+                    <div class="product box-item grapDes" data-category="grapDes">
+                        <img id="thumbnail14" class="thumbnail" data-img="img/imgs/14.jpg" alt="">
+                        <div class="product-info">
+                            <h1 class="title pTex item-name">Kira</h1>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <h4 class="short-desc pTex">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, laudantium.</h4>
+                            <div class="view"><button>view</button></div>
+                        </div>
+                    </div>
+                    <div class="popup-view">
+                        <a class="closeer"><i class="fas fa-times close-btn"></i></a>
+                        <div class="popup-card">
+                          <div class="product-img">
+                            <img src="img/png/14.png" alt="">
+                          </div>
+                          <div class="popup-info">
+                            <h2>Kira</h2>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <p class="poopoo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                
+
+                <div class="product_product">
+                    <div class="product box-item grapDes" data-category="grapDes">
+                        <img id="thumbnail15" class="thumbnail" data-img="img/imgs/15.jpg" alt="">
+                        <div class="product-info">
+                            <h1 class="title pTex item-name">HAHAHA</h1>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <h4 class="short-desc pTex">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, laudantium.</h4>
+                            <div class="view"><button>view</button></div>
+                        </div>
+                    </div>
+                    <div class="popup-view">
+                        <a class="closeer"><i class="fas fa-times close-btn"></i></a>
+                        <div class="popup-card">
+                          <div class="product-img">
+                            <img src="img/png/15.png" alt="">
+                          </div>
+                          <div class="popup-info">
+                            <h2>HAHAHA</h2>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <p class="poopoo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                
+
+                <div class="product_product">
+                    <div class="product box-item grapDes" data-category="grapDes">
+                        <img id="thumbnail16" class="thumbnail" data-img="img/imgs/16.jpg" alt="">
+                        <div class="product-info">
+                            <h1 class="title pTex item-name">Abstract</h1>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <h4 class="short-desc pTex">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, laudantium.</h4>
+                            <div class="view"><button>view</button></div>
+                        </div>
+                    </div>
+                    <div class="popup-view">
+                        <a class="closeer"><i class="fas fa-times close-btn"></i></a>
+                        <div class="popup-card">
+                          <div class="product-img">
+                            <img src="img/png/16.png" alt="">
+                          </div>
+                          <div class="popup-info">
+                            <h2>Abstract</h2>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <p class="poopoo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                
+
+                <div class="product_product">
+                    <div class="product box-item grapDes" data-category="grapDes">
+                        <img id="thumbnail17" class="thumbnail" data-img="img/imgs/17.jpg" alt="">
+                        <div class="product-info">
+                            <h1 class="title pTex item-name">Absurdism</h1>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <h4 class="short-desc pTex">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, laudantium.</h4>
+                            <div class="view"><button>view</button></div>
+                        </div>
+                    </div>
+                    <div class="popup-view">
+                        <a class="closeer"><i class="fas fa-times close-btn"></i></a>
+                        <div class="popup-card">
+                          <div class="product-img">
+                            <img src="img/png/17.png" alt="">
+                          </div>
+                          <div class="popup-info">
+                            <h2>Absurdism</h2>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <p class="poopoo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                
+
+                <div class="product_product">
+                    <div class="product box-item grapDes" data-category="grapDes">
+                        <img id="thumbnail18" class="thumbnail" data-img="img/imgs/18.jpg" alt="">
+                        <div class="product-info">
+                            <h1 class="title pTex item-name">Iroh</h1>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <h4 class="short-desc pTex">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, laudantium.</h4>
+                            <div class="view"><button>view</button></div>
+                        </div>
+                    </div>
+                    <div class="popup-view">
+                        <a class="closeer"><i class="fas fa-times close-btn"></i></a>
+                        <div class="popup-card">
+                          <div class="product-img">
+                            <img src="img/png/18.png" alt="">
+                          </div>
+                          <div class="popup-info">
+                            <h2>Iroh</h2>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <p class="poopoo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                
+
+                <div class="product_product">
+                    <div class="product box-item grapDes" data-category="grapDes">
+                        <img id="thumbnail19" class="thumbnail" data-img="img/imgs/19.jpg" alt="">
+                        <div class="product-info">
+                            <h1 class="title pTex item-name">MF DOOM</h1>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <h4 class="short-desc pTex">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, laudantium.</h4>
+                            <div class="view"><button>view</button></div>
+                        </div>
+                    </div>
+                    <div class="popup-view">
+                        <a class="closeer"><i class="fas fa-times close-btn"></i></a>
+                        <div class="popup-card">
+                          <div class="product-img">
+                            <img src="img/png/19.png" alt="">
+                          </div>
+                          <div class="popup-info">
+                            <h2>MF DOOM</h2>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <p class="poopoo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                
+
+                <div class="product_product">
+                    <div class="product box-item grapDes" data-category="grapDes">
+                        <img id="thumbnail20" class="thumbnail" data-img="img/imgs/20.jpg" alt="">
+                        <div class="product-info">
+                            <h1 class="title pTex item-name">hehe<3</h1>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <h4 class="short-desc pTex">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, laudantium.</h4>
+                            <div class="view"><button>view</button></div>
+                        </div>
+                    </div>
+                    <div class="popup-view">
+                        <a class="closeer"><i class="fas fa-times close-btn"></i></a>
+                        <div class="popup-card">
+                          <div class="product-img">
+                            <img src="img/png/20.png" alt="">
+                          </div>
+                          <div class="popup-info">
+                            <h2>hehe<3</h2>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <p class="poopoo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                
+
+                <div class="product_product">
+                    <div class="product box-item grapDes" data-category="grapDes">
+                        <img id="thumbnail21" class="thumbnail" data-img="img/imgs/21.jpg" alt="">
+                        <div class="product-info">
+                            <h1 class="title pTex item-name">Logo2</h1>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <h4 class="short-desc pTex">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, laudantium.</h4>
+                            <div class="view"><button>view</button></div>
+                        </div>
+                    </div>
+                    <div class="popup-view">
+                        <a class="closeer"><i class="fas fa-times close-btn"></i></a>
+                        <div class="popup-card">
+                          <div class="product-img">
+                            <img src="img/png/21.png" alt="">
+                          </div>
+                          <div class="popup-info">
+                            <h2>Logo2</h2>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <p class="poopoo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                
+
+                <div class="product_product">
+                    <div class="product box-item grapDes" data-category="grapDes">
+                        <img id="thumbnail22" class="thumbnail" data-img="img/imgs/22.jpg" alt="">
+                        <div class="product-info">
+                            <h1 class="title pTex item-name">Thorfin</h1>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <h4 class="short-desc pTex">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, laudantium.</h4>
+                            <div class="view"><button>view</button></div>
+                        </div>
+                    </div>
+                    <div class="popup-view">
+                        <a class="closeer"><i class="fas fa-times close-btn"></i></a>
+                        <div class="popup-card">
+                          <div class="product-img">
+                            <img src="img/png/22.png" alt="">
+                          </div>
+                          <div class="popup-info">
+                            <h2>Thorfin</h2>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <p class="poopoo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                
+
+                <div class="product_product">
+                    <div class="product box-item grapDes" data-category="grapDes">
+                        <img id="thumbnail23" class="thumbnail" data-img="img/imgs/23.jpg" alt="">
+                        <div class="product-info">
+                            <h1 class="title pTex item-name">Toby Fox</h1>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <h4 class="short-desc pTex">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, laudantium.</h4>
+                            <div class="view"><button>view</button></div>
+                        </div>
+                    </div>
+                    <div class="popup-view">
+                        <a class="closeer"><i class="fas fa-times close-btn"></i></a>
+                        <div class="popup-card">
+                          <div class="product-img">
+                            <img src="img/png/23.png" alt="">
+                          </div>
+                          <div class="popup-info">
+                            <h2>Toby Fox</h2>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <p class="poopoo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                
+
+                <div class="product_product">
+                    <div class="product box-item grapDes" data-category="grapDes">
+                        <img id="thumbnail24" class="thumbnail" data-img="img/imgs/24.jpg" alt="">
+                        <div class="product-info">
+                            <h1 class="title pTex item-name">Kira Miki</h1>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <h4 class="short-desc pTex">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, laudantium.</h4>
+                            <div class="view"><button>view</button></div>
+                        </div>
+                    </div>
+                    <div class="popup-view">
+                        <a class="closeer"><i class="fas fa-times close-btn"></i></a>
+                        <div class="popup-card">
+                          <div class="product-img">
+                            <img src="img/png/24.png" alt="">
+                          </div>
+                          <div class="popup-info">
+                            <h2>Kira Miki</h2>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <p class="poopoo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                
+
+                <div class="product_product">
+                    <div class="product box-item grapDes" data-category="grapDes">
+                        <img id="thumbnail25" class="thumbnail" data-img="img/imgs/25.jpg" alt="">
+                        <div class="product-info">
+                            <h1 class="title pTex item-name">Tyler2</h1>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <h4 class="short-desc pTex">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, laudantium.</h4>
+                            <div class="view"><button>view</button></div>
+                        </div>
+                    </div>
+                    <div class="popup-view">
+                        <a class="closeer"><i class="fas fa-times close-btn"></i></a>
+                        <div class="popup-card">
+                          <div class="product-img">
+                            <img src="img/png/25.png" alt="">
+                          </div>
+                          <div class="popup-info">
+                            <h2>Tyler2</h2>
+                            <p class="filter_type pTex item-category"><i class="ri-color-filter-line"></i>  Graphic Design</p>
+                            <p class="poopoo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                </div>
+
+                <div class="product_product">
+                    <div class="product box-item vidEd" data-category="vidEd">
+                        <img id="thumbnail26" class="thumbnail" data-img="img/imgs/yupp.jpg" alt="">
+                        <div class="product-info">
+                            <h1 class="title pTex item-name">Yuppie Psycho</h1>
+                            <p class="filter_type pTex item-category"><i class="ri-film-fill"></i> Video Editing</p>
+                            <h4 class="short-desc pTex">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, laudantium.</h4>
+                            <div class="view"><button>view</button></div>
+                        </div>
+                    </div>
+
+                    <div class="popup-view">
+                        <a class="closeer"><i class="fas fa-times close-btn"></i></a>
+                        <div class="popup-card">
+                          <div class="product-img">
+                            <iframe width="1080px"src="https://www.youtube-nocookie.com/embed/ZmQdMGbzUsE?si=6TdewU1pFhtXKnBV?rel=0&autoplay=0&showinfo=0&controls=0" ></iframe>
+                          </div>
+                          <div class="popup-info">
+                            <h2>Yuppie Psycho</h2>
+                            <p class="filter_type pTex item-category"><i class="ri-film-fill"></i> Video Editing</p>
+                            <p class="poopoo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                
+
+                <div class="product_product">
+                    <div class="product box-item vidEd" data-category="vidEd">
+                        <img id="thumbnail27" class="thumbnail" data-img="img/imgs/blas.jpg" alt="">
+                        <div class="product-info">
+                            <h1 class="title pTex item-name">Blasphemous</h1>
+                            <p class="filter_type pTex item-category"><i class="ri-film-fill"></i> Video Editing</p>
+                            <h4 class="short-desc pTex">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, laudantium.</h4>
+                            <div class="view"><button>view</button></div>
+                        </div>
+                    </div>
+
+                    <div class="popup-view">
+                        <a class="closeer"><i class="fas fa-times close-btn"></i></a>
+                        <div class="popup-card">
+                          <div class="product-img">
+                            <iframe width="1080px"src="https://www.youtube-nocookie.com/embed/q7-rGvIUMa8?si=paFOHNq0XIL91mX8?rel=0&autoplay=0&showinfo=0&controls=0" ></iframe>
+                          </div>
+                          <div class="popup-info">
+                            <h2>Blashemous</h2>
+                            <p class="filter_type pTex item-category"><i class="ri-film-fill"></i> Video Editing</p>
+                            <p class="poopoo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                
+
+                <div class="product_product">
+                    <div class="product box-item vidEd" data-category="vidEd">
+                        <img id="thumbnail28" class="thumbnail" data-img="img/imgs/nso.jpg" alt="">
+                        <div class="product-info">
+                            <h1 class="title pTex item-name">Unfinished</h1>
+                            <p class="filter_type pTex item-category"><i class="ri-film-fill"></i> Video Editing</p>
+                            <h4 class="short-desc pTex">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, laudantium.</h4>
+                            <div class="view"><button>view</button></div>
+                        </div>
+                    </div>
+                    <div class="popup-view">
+                        <a class="closeer"><i class="fas fa-times close-btn"></i></a>
+                        <div class="popup-card">
+                          <div class="product-img">
+                            <iframe width="1080px"src="https://www.youtube-nocookie.com/embed/peSwjvcqn2g?rel=0&autoplay=0&showinfo=0&controls=0" ></iframe>
+                          </div>
+                          <div class="popup-info">
+                            <h2>Needy Girl Overdose</h2>
+                            <p class="filter_type pTex item-category"><i class="ri-film-fill"></i> Video Editing</p>
+                            <p class="poopoo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                
+
+                <div class="product_product">
+                    <div class="product box-item prog" data-category="prog">
+                        <img id="thumbnail29" class="thumbnail" data-img="img/imgs/codeThumb.png" alt="">
+                        <div class="product-info">
+                            <h1 class="title pTex item-name">Java Program 1</h1>
+                            <p class="filter_type pTex item-category"><i class="ri-code-s-slash-line"></i> Programming</p>
+                            <h4 class="short-desc pTex">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, laudantium.</h4>
+                            <div class="view"><button>view</button></div>
+                        </div>
+                    </div>
+
+                    <div class="popup-view">
+                        <a class="closeer"><i class="fas fa-times close-btn"></i></a>
+                        <div class="popup-card">
+                          <div class="code-wrapper">
+                              <pre>
+                                  <code id="code" class="language-java">
+import java.util.Scanner;
+public class Exer3 {
+    public static void main(String[]args) {
+        
+        Scanner in = new Scanner(System.in);
+        
+        int num;
+        
+        System.out.println("Enter a Number.");
+        num = in.nextInt();
+        in.nextLine();
+        
+        if (num > 0) {
+            System.out.println(num+" is a positive number.");
+        }
+        else if (num < 0) {
+            System.out.println(num+" is a negative number.");
+        }
+        else if (num == 0) {
+            System.out.println(num+" is neither a positive nor negative number.");
+        }
+    }
+}  
+                                </code>
+                            </pre>
+                           
+                          </div>
+                          <div class="popup-info">
+                            <h2>Java Program 1</h2>
+                            <h2>Positive or Negative</h2>
+                            <p class="filter_type pTex item-category"><i class="ri-code-s-slash-line"></i> Programming</p>
+                            <p class="poopoo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                
+
+                <div class="product_product">
+                    <div class="product box-item prog" data-category="prog">
+                        <img id="thumbnail30" class="thumbnail" data-img="img/imgs/codeThumb.png" alt="">
+                        <div class="product-info">
+                            <h1 class="title pTex item-name">Java Program 2</h1>
+                            <p class="filter_type pTex item-category"><i class="ri-code-s-slash-line"></i> Programming</p>
+                            <h4 class="short-desc pTex">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, laudantium.</h4>
+                            <div class="view"><button>view</button></div>
+                        </div>
+                    </div>
+
+                    <div class="popup-view">
+                        <a class="closeer"><i class="fas fa-times close-btn"></i></a>
+                        <div class="popup-card">
+                          <div class="code-wrapper">
+                              <pre>
+                                  <code id="code" class="language-java">
+import java.util.Scanner;
+public class Exer4 {
+    public static void main(String[]args){
+        
+        Scanner in = new Scanner(System.in);
+        
+        char letter;
+        
+        System.out.println("Enter a Character.");
+        letter = in.nextLine().charAt(0);
+        
+        if (letter >= 'a' && letter <= 'z') {
+            System.out.println(letter+" is lowercase.");
+        }
+        else if (letter >= 'A' && letter <= 'Z') {
+            System.out.println(letter+" is uppercase.");
+        }
+        else if (letter != 'a') {
+            System.out.println(letter+" not a letter.");
+        }
+    }
+} 
+                                </code>
+                            </pre>
+                           
+                          </div>
+                          <div class="popup-info">
+                            <h2>Java Program 2</h2>
+                            <h2>lower or uppercase</h2>
+                            <p class="filter_type pTex item-category"><i class="ri-code-s-slash-line"></i> Programming</p>
+                            <p class="poopoo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                </div>
+               
+
+                <div class="product_product">
+                    <div class="product box-item prog" data-category="prog">
+                        <img id="thumbnail31" class="thumbnail" data-img="img/imgs/codeThumb.png" alt="">
+                        <div class="product-info">
+                            <h1 class="title pTex item-name">Java Program 3</h1>
+                            <p class="filter_type pTex item-category"><i class="ri-code-s-slash-line"></i> Programming</p>
+                            <h4 class="short-desc pTex">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, laudantium.</h4>
+                            <div class="view"><button>view</button></div>
+                        </div>
+                    </div>
+
+                    <div class="popup-view">
+                        <a class="closeer"><i class="fas fa-times close-btn"></i></a>
+                        <div class="popup-card">
+                          <div class="code-wrapper">
+                              <pre>
+                                  <code id="code" class="language-java">
+import java.util.Scanner;
+public class Calc {
+    public static void main(String[]args) {
+        Scanner in = new Scanner(System.in);
+        
+        int userIn, eq=0;
+        char op;
+        
+        System.out.println("Welcome to calculator! (= to exit & get final value)");
+        System.out.print("Enter number: ");
+        userIn = in.nextInt();
+        in.nextLine();
+        eq += userIn;
+        do{
+            System.out.print("Select operator + | - | * | / | = : ");
+            op = in.next().charAt(0);
+            in.nextLine();
+            if (op=='=') {
+                break;
+            }
+            System.out.print("Enter number: ");
+            if (op=='+') {
+                eq += in.nextInt();
+                in.nextLine();
+                System.out.println("= "+eq );
+            }
+            else if (op=='-') {
+                eq -= in.nextInt();
+                in.nextLine();
+                System.out.println("= "+eq );
+            }
+            else if (op=='*') {
+                eq *= in.nextInt();
+                in.nextLine();
+                System.out.println("= "+eq );
+            }
+            else if (op=='/') {
+                eq /= in.nextInt();
+                in.nextLine();
+                System.out.println("= "+eq );
+            }
+        }while(op!='='||op=='+'||op=='-'||op=='/'||op=='*');
+        System.out.println("= "+eq);
+    }
+}
+                                </code>
+                            </pre>
+                           
+                          </div>
+                          <div class="popup-info">
+                            <h2>Java Program 3</h2>
+                            <h2>Calculator</h2>
+                            <p class="filter_type pTex item-category"><i class="ri-code-s-slash-line"></i> Programming</p>
+                            <p class="poopoo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                
+
+                <div class="product_product">
+                    <div class="product box-item prog" data-category="prog">
+                        <img id="thumbnail32" class="thumbnail" data-img="img/imgs/codeThumb.png" alt="">
+                        <div class="product-info">
+                            <h1 class="title pTex item-name">Java Program 4</h1>
+                            <p class="filter_type pTex item-category"><i class="ri-code-s-slash-line"></i> Programming</p>
+                            <h4 class="short-desc pTex">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, laudantium.</h4>
+                            <div class="view"><button>view</button></div>
+                        </div>
+                    </div>
+
+                    <div class="popup-view">
+                        <a class="closeer"><i class="fas fa-times close-btn"></i></a>
+                        <div class="popup-card">
+                          <div class="code-wrapper">
+                              <pre>
+                                  <code id="code" class="language-java">
+import java.util.Scanner;
+public class Monies {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        final int hundredsVal, fiftiesVal, twentiesVal, tensVal, fivesVal, onesVal;
+        hundredsVal = 100;
+        fiftiesVal = 50;
+        twentiesVal = 20;
+        tensVal = 10;
+        fivesVal = 5;
+        onesVal = 1;
+        final float twentyFiveCentsVal, tenCentsVal, fiveCentsVal, oneCentsVal;
+        twentyFiveCentsVal = .25f;
+        tenCentsVal = .10f;
+        fiveCentsVal = .05f;
+        oneCentsVal = .01f;
+
+        int hundreds, fifties, twenties, tens, fives, ones, twentyFiveCents, tenCents, fiveCents, oneCents;
+        float amount, runningAmount;
+
+        System.out.print("Enter monies: ");
+        amount = in.nextFloat();
+        in.nextLine();
+
+        runningAmount = amount;
+
+        hundreds = (int) (runningAmount / hundredsVal);
+        runningAmount -= hundreds * hundredsVal;
+        fifties = (int) (runningAmount / fiftiesVal);
+        runningAmount -= fifties * fiftiesVal;
+        twenties = (int) (runningAmount / twentiesVal);
+        runningAmount -= twenties * twentiesVal;
+        tens = (int) (runningAmount / tensVal);
+        runningAmount -= tens * tensVal;
+        fives = (int) (runningAmount / fivesVal);
+        runningAmount -= fives * fivesVal;
+        ones = (int) (runningAmount / onesVal);
+        runningAmount -= ones * onesVal;
+        twentyFiveCents = (int) (runningAmount / twentyFiveCentsVal);
+        runningAmount -= twentyFiveCents * twentyFiveCentsVal;
+        tenCents = (int) (runningAmount / tenCentsVal);
+        runningAmount -= tenCents * tenCentsVal;
+        fiveCents = (int) (runningAmount / fiveCentsVal);
+        runningAmount %= fiveCentsVal;
+        oneCents = (int) Math.round(runningAmount / oneCentsVal);
+        runningAmount -= oneCents * oneCentsVal;
+
+        System.out.printf("You entered %.2f monies\n", amount);
+        System.out.printf("hundred monie bills: %d\n", hundreds);
+        System.out.printf("fifty monie bills: %d\n", fifties);
+        System.out.printf("twenty monie coins: %d\n", twenties);
+        System.out.printf("ten monie coins: %d\n", tens);
+        System.out.printf("five monie coins: %d\n", fives);
+        System.out.printf("one monie coins: %d\n", ones);
+        System.out.printf("twenty five monie cents: %d\n", twentyFiveCents);
+        System.out.printf("ten monie cents: %d\n", tenCents);
+        System.out.printf("five monie cents: %d\n", fiveCents);
+        System.out.printf("one monie cents: %d\n", oneCents);
+        System.out.printf("running amount: %.2f", runningAmount);
+    }
+}
+                                </code>
+                            </pre>
+                           
+                          </div>
+                          <div class="popup-info">
+                            <h2>Java Program 4</h2>
+                            <h2>Monies</h2>
+                            <p class="filter_type pTex item-category"><i class="ri-code-s-slash-line"></i> Programming</p>
+                            <p class="poopoo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                
+
+                <div class="product_product">
+                    <div class="product box-item prog" data-category="prog">
+                        <img id="thumbnail33" class="thumbnail" data-img="img/imgs/codeThumb.png" alt="">
+                        <div class="product-info">
+                            <h1 class="title pTex item-name">Java Program 5</h1>
+                            <p class="filter_type pTex item-category"><i class="ri-code-s-slash-line"></i> Programming</p>
+                            <h4 class="short-desc pTex">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, laudantium.</h4>
+                            <div class="view"><button>view</button></div>
+                        </div>
+                    </div>
+
+                    <div class="popup-view">
+                        <a class="closeer"><i class="fas fa-times close-btn"></i></a>
+                        <div class="popup-card">
+                          <div class="code-wrapper">
+                              <pre>
+                                  <code id="code" class="language-java">
+import java.util.Scanner;
+import java.util.InputMismatchException;
+
+public class Exer3 {
+    public static void main(String[]args) {
+        try {
+            Scanner in = new Scanner(System.in);
+            int temp, ones, tens, teens, hundreds;
+            String result1, result2, result3, result4;
+        
+            System.out.println("Enter a number 1-999 only");
+            temp = in.nextInt();
+            in.nextLine();
+        
+            ones = temp%10;
+            tens = (temp%100)-(temp%10);
+            teens = ones+tens;
+            hundreds = (temp%1000)-(temp%100);
+        
+            result1 = switch(ones) {
+                case 1 -> "one";
+                case 2 -> "two";
+                case 3 -> "three";
+                case 4 -> "four";
+                case 5 -> "five";
+                case 6 -> "six";
+                case 7 -> "seven";
+                case 8 -> "eight";
+                case 9 -> "nine";
+                default -> " ";
+            };
+            result2 = switch(tens) {
+                case 10 -> "ten";
+                case 20 -> "twenty";
+                case 30 -> "thirty";
+                case 40 -> "forty";
+                case 50 -> "fifty";
+                case 60 -> "sixty";
+                case 70 -> "seventy";
+                case 80 -> "eighty";
+                case 90 -> "ninety";
+                default -> " ";
+            };
+            result3 = switch(teens) {
+                case 11 -> "eleven";
+                case 12 -> "twelve";
+                case 13 -> "thirteen";
+                case 14 -> "fourteen";
+                case 15 -> "fifteen";
+                case 16 -> "sixteen";
+                case 17 -> "seventeen";
+                case 18 -> "eighteen";
+                case 19 -> "nineteen";
+                default -> " ";
+            };
+            result4 = switch(hundreds) {
+                case 100 -> "one hundred";
+                case 200 -> "two hundred";
+                case 300 -> "three hundred";
+                case 400 -> "four hundred";
+                case 500 -> "five hundred";
+                case 600 -> "six hundred";
+                case 700 -> "seven hundred";
+                case 800 -> "eight hundred";
+                case 900 -> "nine hundred";
+                default -> " ";
+            };
+        
+            if (temp>=1 && temp<=9) {
+                System.out.println(result1);
+            }
+            else if (temp==10 || temp>=20 && temp<=99) {
+                System.out.println(result2+" "+result1);
+            }
+            else if (temp>=11 && temp<=19) {
+                System.out.println(result3);
+            }
+            else if (
+            temp>=111 && temp<=119 || 
+            temp>=211 && temp<=219 || 
+            temp>=311 && temp<=319 || 
+            temp>=411 && temp<=519 || 
+            temp>=611 && temp<=619 || 
+            temp>=711 && temp<=719 || 
+            temp>=811 && temp<=819 || 
+            temp>=911 && temp<=919) {
+                System.out.println(result4+" "+result3);
+            }
+            else if (temp>=100 && temp<=999) {
+                System.out.println(result4+" "+result2+" "+result1);
+            }
+            else if (temp>=1000 || temp<=0) {
+                System.out.println("invalid number");
+            } 
+        }
+        catch (InputMismatchException e) {
+            System.out.println("Invalid Input. Error is: " + e);
+        }
+    }
+} 
+                                </code>
+                            </pre>
+                           
+                          </div>
+                          <div class="popup-info">
+                            <h2>Java Program 5</h2>
+                            <h2>Nums -> Words</h2>
+                            <p class="filter_type pTex item-category"><i class="ri-code-s-slash-line"></i> Programming</p>
+                            <p class="poopoo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                
+
+                <div class="product_product">
+                    <div class="product box-item prog" data-category="prog">
+                        <img id="thumbnail34" class="thumbnail" data-img="img/imgs/codeThumb.png" alt="">
+                        <div class="product-info">
+                            <h1 class="title pTex item-name">Java Program 6</h1>
+                            <p class="filter_type pTex item-category"><i class="ri-code-s-slash-line"></i> Programming</p>
+                            <h4 class="short-desc pTex">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, laudantium.</h4>
+                            <div class="view"><button>view</button></div>
+                        </div>
+                    </div>
+
+                    <div class="popup-view">
+                        <a class="closeer"><i class="fas fa-times close-btn"></i></a>
+                        <div class="popup-card">
+                          <div class="code-wrapper">
+                              <pre>
+                                  <code id="code" class="language-java">
+import java.util.Scanner;
+
+public class exer6 {
+    public static void main(String[]args) {
+        
+        Scanner in = new Scanner(System.in);
+        
+        long idNum, luck, tries=1;
+        
+        System.out.println("Enter ID Number:");
+        idNum = in.nextLong();
+        in.nextLine();	
+        
+        System.out.println("Guess the Lucky Number:");
+        luck = in.nextLong();
+        in.nextLine();
+        
+        while (idNum % 10 != luck) {
+            System.out.println("Oops! That's not the lucky number(-_-), try again.");
+            luck = in.nextInt();
+            in.nextLine();
+            tries++;
+        }
+        
+        if (idNum % 10 == luck) {
+            System.out.println("Congrats! You got the Lucky Number!(^_^)\n it took you "+tries+" guesses to get it!");
+        }
+        
+    }
+}
+                                </code>
+                            </pre>
+                           
+                          </div>
+                          <div class="popup-info">
+                            <h2>Java Program 6</h2>
+                            <h2>Lucky Number</h2>
+                            <p class="filter_type pTex item-category"><i class="ri-code-s-slash-line"></i> Programming</p>
+                            <p class="poopoo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                
+
+
+                <div class="product_product">
+                    <div class="product box-item prog" data-category="prog">
+                        <img id="thumbnail35" class="thumbnail" data-img="img/imgs/codeThumb.png" alt="">
+                        <div class="product-info">
+                            <h1 class="title pTex item-name">Java Program 7</h1>
+                            <p class="filter_type pTex item-category"><i class="ri-code-s-slash-line"></i> Programming</p>
+                            <h4 class="short-desc pTex">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, laudantium.</h4>
+                            <div class="view"><button>view</button></div>
+                        </div>
+                    </div>
+
+                    <div class="popup-view">
+                        <a class="closeer"><i class="fas fa-times close-btn"></i></a>
+                        <div class="popup-card">
+                          <div class="code-wrapper">
+                              <pre>
+                                  <code id="code" class="language-java ">
+import java.util.Scanner;
+public class arrays {
+    public static void main(String[]args) {
+        Scanner in = new Scanner(System.in);
+        //input #players
+        System.out.print("Enter numeber of players: ");
+        int playNum = in.nextInt();
+        in.nextLine();
+        //make arrays
+        String[] playName = new String[playNum];
+        int[] playAge = new int[playNum];
+        int ageSum =0;
+        //store and sort array values
+        for (int i = 0; i < playNum; i++) {
+            System.out.print("Enter player #"+(i+1)+"'s Name: ");
+            playName[i] = in.nextLine();
+            System.out.print("Enter "+playName[i]+"'s Age: ");
+            playAge[i] = in.nextInt();
+            in.nextLine();
+            
+            ageSum += playAge[i];
+        }
+        
+        System.out.println();
+        //display with forloop
+        System.out.println("List of players (ForLoop)");
+        for (int i = 0; i < playNum; i++) {
+            System.out.println("Player #"+(i+1)+"\n  Name: "+ playName[i]+" | Age: "+playAge[i]);
+        }
+        System.out.println();
+        //display with forEachLoop
+        System.out.println("List of players (ForEachLoop)");
+        int temp = 0;
+        for (String name : playName) {
+            System.out.println("Player #"+(temp+1)+"\n Name: "+name+" | Age: "+ playAge[temp]);
+            temp++;
+        }
+        System.out.println();
+        //average age calc
+        int ave = ageSum/playNum;
+        System.out.println("Average player age is "+ ave);
+        //display player names with below average age
+        System.out.println();		
+        System.out.println("Players with below average age:");
+        for (int i = 0; i< playNum; i++) {
+            if (ave>playAge[i]) {
+                System.out.println("Player #"+(i+1)+"\n   Name: "+playName[i]+" | Age: "+playAge[i]);
+                
+            }
+        } 
+    }
+}
+                                </code>
+                            </pre>
+                           
+                          </div>
+                          <div class="popup-info">
+                            <h2>Java Program 7</h2>
+                            <h2>Arrays</h2>
+                            <p class="filter_type pTex item-category"><i class="ri-code-s-slash-line"></i> Programming</p>
+                            <p class="poopoo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                </div>
+
+
+
+                
+                
+                
+                
+                
+            </div>
+            
+        </div>
+    </div>
+   
+    <button id="scroll-top-btn">
+        <i class="fa fa-angle-up"></i>
+    </button>
+    <div class="footcont">
+        <footer>
+            <div class="footer_content">
+                <div class="top">
+                    <img class="logo_footer" alt="logo" src="img/RinDexLogo copy.png">
+    
+                    <div class="foot_social">
+                        <a href="https://www.facebook.com/egwolk?lst=100004351207708%3A100004351207708%3A1706836342&eav=AfaJz4h5RZi_9wZ6r1SR78l3W-_RR2dqEeJmQNi6TgiZGz9UW4Ea_NPf-3uchwNljFM&paipv=0/" target="_blank"  class="icons"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/egwolk/?hl=en" target="_blank" class="icons"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.discordapp.com/users/757221998085799997"
+                        target="_blank" class="icons"><i class="fab fa-discord"></i></a>
+                        <a href="https://www.tiktok.com/@egwolk?is_from_webapp=1&sender_device=pc"  target="_blank" class="icons"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.youtube.com/@egwolk" target="_blank" class="icons"><i class="fab fa-youtube"></i></a>
+                        <a href="https://open.spotify.com/user/ny54x7vme5920ggf7z7z9rj0w?si=40ca4a85bc434717"  target="_blank"  class="icons"><i class="fab fa-spotify"></i></a>
+                        <a href="https://steamcommunity.com/id/egwolk" target="_blank"  class="icons"><i class="fab fa-steam-symbol"></i></a>
+                        <a href="mailto:erincovacha@gmail.com" target="_blank"  class="icons"><i class="fa-regular fa-envelope"></i></a>
+                    </div>
+                    <a href="donate.html" class="foot_donate">Donate</a>
+               
+                </div>
+                <div class="foot_cred">
+                    <p >Erin Drew C. Covacha &copy; 2024 RinDex. All rights reserved.</p>
+                    <a href="legal.html">Copyright Policy</a>
+                    <a class="text" href="legal.html">Privacy Policy</a>
+                </div>
+            </div>
+            
+    
+        </footer>
+    </div>
+
+
+    <canvas class="canvas" id="canvas"></canvas>
+   
+    <script type="text/javascript">
+
+$('.video').click(function(){this.paused?this.play():this.pause();});
+var popupViews = document.querySelectorAll('.popup-view');
+var popupBtns = document.querySelectorAll('.view');
+var closeBtns = document.querySelectorAll('.closeer');
+let blurb = document.getElementById("blaur");
+
+// Function to open popup
+popupBtns.forEach((popupBtn, i) => {
+  popupBtn.addEventListener("click", () => {
+    popupViews[i].classList.add('active');
+    blurb.classList.add("regblur"); 
+    blurb.style.zIndex = "1";
+    document.querySelector('#scroll-top-btn').style.zIndex = "-1"
+    document.querySelector('.header').style.zIndex = "1";
+    document.querySelector('.portcontainer1').style.zIndex = "1";
+    document.body.style.overflow = "hidden";
+  });
+});
+
+// Function to close popup
+closeBtns.forEach((closeBtn, i) => {
+  closeBtn.addEventListener("click", () => {
+    popupViews[i].classList.remove('active');
+    blurb.classList.remove("regblur");
+    blurb.style.zIndex = "";
+    document.querySelector('.header').style.zIndex = "";
+    document.querySelector('.portcontainer1').style.zIndex = "";
+    document.querySelector('#scroll-top-btn').style.zIndex = ""
+    document.body.style.overflow = "auto";
+  });
+});
+
+      </script>
+      
+      
+      
+
+    <script>
+        const portShadow = (function() {
+  window.addEventListener('load', function() {
+    const carouselContainer = document.getElementById('portfolio1');
+    const carouselShadow = document.querySelector('.portShadow');
+
+    function updateShadowDimensionsAndPosition() {
+        const carouselRect = carouselContainer.getBoundingClientRect(); 
+
+    
+        carouselShadow.style.width = `${carouselRect.width}px`;
+        carouselShadow.style.height = `${carouselRect.height}px`;
+
+       
+        carouselShadow.style.top = `${carouselRect.top + window.scrollY}px`;
+        carouselShadow.style.left = `${carouselRect.left}px`;
+    }
+
+    updateShadowDimensionsAndPosition(); 
+
+    window.addEventListener('resize', updateShadowDimensionsAndPosition);
+    window.addEventListener('scroll', updateShadowDimensionsAndPosition);
+});
+})();
+    </script>
+    <script>
+        const portmargin = document.getElementById("portconatiner1");
+        function allr() {
+            portmargin.style.margin = '8.5rem 5% 150% 5%';
+        }
+        function progr() {
+            portmargin.style.margin = '8.5rem 5% 15% 5%';
+        }
+        function gra() {
+            portmargin.style.margin = '8.5rem 5% 95% 5%';
+        }
+        function vide() {
+            portmargin.style.margin = '8.5rem 5% 0% 5%';
+        }
+        
+    </script>
+
+    
+    <script >
+        $(document).ready(function(){
+            var $listing = $(".products").isotope({
+                itemSelector: '.box-item',
+                layoutMode: 'fitRows',
+                getSortData : {
+                    number: '.item-id parseInt',
+                    name: 'item-name',
+                    category: '[data-category]'
+                }
+            });
+            $("#filters").on("click", "button", function() {
+                $("#filters button").removeClass("active");
+                $(this).addClass("active");
+                var filterValue = $(this).attr('data-filter');
+                $listing.isotope({filter: filterValue});
+            });
+        }); 
+    </script>
+    
+    <script defer async>
+        const scrollUp = (function() {
+        const scrollTopBtn = document.querySelector("#scroll-top-btn");
+
+        window.addEventListener("scroll", function(){
+            const scrollTop = window.pageYOffset;
+            const height = window.innerHeight;
+            if(scrollTop > (height/3)){
+            scrollTopBtn.classList.add("visible");
+            } else {
+            scrollTopBtn.classList.remove("visible");
+            }
+        });
+        
+        scrollTopBtn.addEventListener("click", function(){
+            window.scrollTo({
+            top:0,
+            behavior:"smooth"
+            })
+        });
+        })();
+    </script>
+    <script>
+        let options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 1, 
+        };
+        let callback = (entries, observer)=>{
+            entries.forEach(entry => {
+                if (entry.isIntersecting
+                    && entry.target.className === 'thumbnail') {
+                        let imageUrl = entry.target.getAttribute('data-img');
+                        if (imageUrl) {
+                            entry.target.src = imageUrl;
+                            observer.unobserve(entry.target);
+                        }
+                    }
+                
+            });
+        }
+        let observer = new IntersectionObserver(callback, options);
+        observer.observe(document.querySelector('#thumbnail1'));
+        observer.observe(document.querySelector('#thumbnail2'));
+        observer.observe(document.querySelector('#thumbnail3'));
+        observer.observe(document.querySelector('#thumbnail4'));
+        observer.observe(document.querySelector('#thumbnail5'));
+        observer.observe(document.querySelector('#thumbnail6'));
+        observer.observe(document.querySelector('#thumbnail7'));
+        observer.observe(document.querySelector('#thumbnail8'));
+        observer.observe(document.querySelector('#thumbnail9'));
+        observer.observe(document.querySelector('#thumbnail10'));
+        observer.observe(document.querySelector('#thumbnail11'));
+        observer.observe(document.querySelector('#thumbnail12'));
+        observer.observe(document.querySelector('#thumbnail13'));
+        observer.observe(document.querySelector('#thumbnail14'));
+        observer.observe(document.querySelector('#thumbnail15'));
+        observer.observe(document.querySelector('#thumbnail16'));
+        observer.observe(document.querySelector('#thumbnail17'));
+        observer.observe(document.querySelector('#thumbnail18'));
+        observer.observe(document.querySelector('#thumbnail19'));
+        observer.observe(document.querySelector('#thumbnail20'));
+        observer.observe(document.querySelector('#thumbnail21'));
+        observer.observe(document.querySelector('#thumbnail22'));
+        observer.observe(document.querySelector('#thumbnail23'));
+        observer.observe(document.querySelector('#thumbnail24'));
+        observer.observe(document.querySelector('#thumbnail25'));
+        observer.observe(document.querySelector('#thumbnail26'));
+        observer.observe(document.querySelector('#thumbnail27'));
+        observer.observe(document.querySelector('#thumbnail28'));
+        observer.observe(document.querySelector('#thumbnail29'));
+        observer.observe(document.querySelector('#thumbnail30'));
+        observer.observe(document.querySelector('#thumbnail31'));
+        observer.observe(document.querySelector('#thumbnail32'));
+        observer.observe(document.querySelector('#thumbnail33'));
+        observer.observe(document.querySelector('#thumbnail34'));
+        observer.observe(document.querySelector('#thumbnail35'));
+    </script>
+     <script src="port.js"></script>
+    <script src="prism.js"></script>
+     <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js" integrity="sha512-jNDtFf7qgU0eH/+Z42FG4fw3w7DM/9zbgNPe3wfJlCylVDTT3IgKW5r92Vy9IHa6U50vyMz5gRByIu4YIXFtaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

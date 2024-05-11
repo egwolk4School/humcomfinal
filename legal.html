@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RinDex | Legal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/RinDexIcon copy.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer src="script.js"></script>
+    <script src='https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" integrity="sha512-aNMyYYxdIxIaot0Y1/PLuEu3eipGCmsEUBrUq+7aVyPGMFH8z0eTP0tkqAvv34fzN6z+201d3T8HPb1svWSKHQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+        integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+        crossorigin="anonymous"></script>
+
+    
+</head>
+<body>
+    
+    <div class="headercont">
+        <div class="header_b4" ></div>
+    </div>
+    
+    <header class="header" id="header" >
+        <div class="nav container">
+            <div class="nav_data">
+               <a href="index.html"><img class="logo" alt="logo" src="img/RinDexLogo copy.png"></a> 
+                <div class="nav_toggle" id="nav__toggle">
+                    <i class="ri-menu-line burger"></i>
+                    <i class="ri-close-line close"></i>
+                    
+                </div>
+               
+            </div>
+            <div class="menu" id="nav-menu">
+                
+
+                <ul class="nav_links">
+                    
+                    <li><a href="index.html" class="navlink navShuffle">Home</a></li>
+                    <li><a href="portfolio.html" class="navlink navShuffle">Portfolio</a></li>
+                    <li><a href="contact.html" class="navlink navShuffle">Contact</a></li>
+                    <li class="dropdown" >
+                        <div class="navlinka"  id="about_toggle" > 
+                           <a class="navShuffle">About</a><i class="ri-arrow-down-s-line dropdown_arrow" id="arrow"></i>
+                        </div>
+                        
+                        <ul class="dropdown_menu" id="sub_menu">
+                            <li><a href="about_website.html" class="dropdown_link navShuffle" id="dropdown_link ">Website</a></li>
+                            <li><a href="about_dev.html" class="dropdown_link navShuffle" >Dev</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                 <div class="button">
+                    <a href="donate.html" class="donate " id="butn">Donate</a>
+                 </div>
+                    
+            </div>
+        </div>
+       
+    </header>
+    
+
+
+    <div class="footcont">
+        <footer>
+            <div class="footer_content">
+                <div class="top">
+                    <img class="logo_footer" alt="logo" src="img/RinDexLogo copy.png">
+    
+                    <div class="foot_social">
+                        <a href="https://www.facebook.com/egwolk?lst=100004351207708%3A100004351207708%3A1706836342&eav=AfaJz4h5RZi_9wZ6r1SR78l3W-_RR2dqEeJmQNi6TgiZGz9UW4Ea_NPf-3uchwNljFM&paipv=0/" target="_blank"  class="icons"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/egwolk/?hl=en" target="_blank" class="icons"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.discordapp.com/users/757221998085799997"
+                        target="_blank" class="icons"><i class="fab fa-discord"></i></a>
+                        <a href="https://www.tiktok.com/@egwolk?is_from_webapp=1&sender_device=pc"  target="_blank" class="icons"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.youtube.com/@egwolk" target="_blank" class="icons"><i class="fab fa-youtube"></i></a>
+                        <a href="https://open.spotify.com/user/ny54x7vme5920ggf7z7z9rj0w?si=40ca4a85bc434717"  target="_blank"  class="icons"><i class="fab fa-spotify"></i></a>
+                        <a href="https://steamcommunity.com/id/egwolk" target="_blank"  class="icons"><i class="fab fa-steam-symbol"></i></a>
+                        <a href="mailto:erincovacha@gmail.com" target="_blank"  class="icons"><i class="fa-regular fa-envelope"></i></a>
+                    </div>
+                    <a href="donate.html" class="foot_donate">Donate</a>
+               
+                </div>
+                <div class="foot_cred">
+                    <p >Erin Drew C. Covacha &copy; 2024 RinDex. All rights reserved.</p>
+                    <a href="legal.html">Copyright Policy</a>
+                    <a class="text" href="legal.html">Privacy Policy</a>
+                </div>
+            </div>
+            
+    
+        </footer>
+    </div>
+
+
+    <canvas class="canvas" id="canvas"></canvas>
+    
+
+</body>
+</html>

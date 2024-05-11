@@ -1,0 +1,4180 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+
+@font-face {
+  font-family: kremlin;
+  src: url(kremlin.ttf);
+}
+
+
+
+html {
+height: 100%;
+scroll-snap-type: y proximity;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding:0;
+  letter-spacing: 1px;
+
+ 
+}
+body {
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: 100vw;
+  height: 100vh;
+  color: #fff;
+  align-items: center;
+
+
+  
+}
+.headercont {
+  position: absolute;
+  inset: 0; 
+  
+}
+.header_b4{
+--slant: 5em;  
+position: absolute;
+top: 0;
+left: 0;
+height: 6.1rem;
+background-color: rgba(0, 0, 0,  .9);
+width: 100vw;
+-webkit-clip-path: polygon(0 0, 
+100% 0, 100% calc(100% - var(--slant)),
+calc(100% - var(--slant)) 100%, 
+var(--slant) 100%, 
+0 calc(100% - var(--slant)) 
+);
+z-index: 1;
+overflow: hidden;
+transition: height 0.5s ease;
+
+}
+header {
+position: absolute;
+top: 0;
+left: 0;
+height: 6.1rem;
+overflow: visible;
+width: 100vw;
+align-self: center;
+justify-content: center;
+z-index: 2;
+scroll-snap-align: start;
+
+
+
+}
+.header_b4:before{
+  --b:1px;
+  --s:5em;
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  overflow: hidden;
+  background:#aec7e4;
+  --g1:#0000 0 calc(100% - var(--b)),#000 0;
+  --g2:#0000 0  calc(0.707*var(--s)), 
+       #000  0 calc(0.707*var(--s) + var(--b)),
+       #0000 0,
+       #000  0 ,
+       #0000 0;
+  -webkit-mask:
+    linear-gradient(45deg ,var(--g2)),
+    linear-gradient(-45deg,var(--g2)),
+    linear-gradient(180deg,var(--g1)) 50%/calc(100% - 2*var(--s)) 100% no-repeat;
+}
+
+.container {
+max-width: 90%;
+z-index: 1000;
+margin: auto;
+
+padding:1em 0;
+display: flex;
+
+align-items: center;
+text-align: center;
+justify-content: space-between;
+display: flex;
+
+}
+
+
+.nav_data{
+height: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+overflow: visible;
+z-index: 1000;
+
+}
+.menu{
+justify-content: space-between;
+display: flex;
+align-items: center;
+overflow: visible;
+width: 100%;
+z-index: 1000;
+padding: 0px 1em;
+
+
+
+
+}
+.nav_links  {
+display: flex;
+justify-content: space-between;
+list-style: none;
+margin: auto;
+overflow: visible;
+
+
+align-items: center;
+
+}
+.menu li {
+text-align: center;
+padding: 0 40px;
+overflow: visible;
+
+
+}
+.navlink{
+text-decoration: none;
+display: inline;
+font-size: 16px;
+color: #aec7e4;
+font-family: "Kode Mono", monospace;
+
+z-index: 1000;
+}
+
+.navlink:hover{
+  color: #fff;
+}
+.nav_data img {
+  width: 175px;
+  padding: 0;
+  margin: 0;
+}
+
+.logo {
+  cursor: pointer;
+  align-items: center;
+  display: inline-flex;
+}
+
+
+.burger,
+.close {
+opacity: 0;
+}
+
+
+
+.dropdown .navlinka {
+cursor: pointer;
+font-family: "Kode Mono", monospace;
+font-size: 16px;
+color: #aec7e4;
+transition: all .3s;
+display: flex;
+
+}
+.dropdown .navlinka:hover{
+color: #fff;
+}
+.dropdown_arrow {
+font-size: 1em;
+rotate: 0deg;
+transition: rotate .1s ease;
+}
+
+
+.dropdown_link  {
+color: #aec7e4;
+text-decoration: none;
+font-family: "Kode Mono", monospace;
+padding: 1rem;
+font-size: 14px;
+margin: 0px;
+transition: all .3s;
+position: relative;
+
+}
+.dropdown .dropdown_menu li{
+list-style: none;
+padding: 1em 0;
+height: max-content;
+position: relative;
+display: inline-block;
+text-align: left;
+inset: 0;
+
+}
+.rin {
+  font-family: "Kremlin", sans-serif;
+  position: absolute;
+  left: 3.8em;
+  
+
+}
+.rin2 {
+  font-family: "Kremlin", sans-serif;
+  position: absolute;
+}
+.rin3 {
+  font-family: "Kremlin", sans-serif;
+  position: absolute;
+  margin-left: 1%;
+}
+
+.stay {
+margin-left: 35%;
+}
+@media(min-width: 800px) {
+  .dropdown_link:hover {
+    color: #fff;
+  }
+  .navlinka:hover .dropdown_arrow{
+    rotate: 180deg;
+  }
+
+  
+  .dropdown:hover .dropdown_menu{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+  }
+  
+  .dropdown_menu {
+  --border: 1px;    
+  --slant: .5em;   
+  --color: #aec7e4; 
+  opacity: 0;
+  visibility: 0;
+  transition: max-height .3s ease-out ;
+  padding:0;
+  position:absolute;
+  max-height:max-content ;
+  text-align: center;
+  transform: translateY(-20px);
+  justify-content: center;
+  width: max-content;
+  margin: auto;
+  display:flex ;
+
+  flex-direction: column;
+  top:70%;
+  background-color: rgba(0, 0, 0,  .9);
+  clip-path: 
+  polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+  100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+  );
+  transition: all .3s;
+  } 
+  .dropdown_menu::before {
+  content: '';
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background: 
+  linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
+  linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
+  background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+  background-repeat: no-repeat;
+  box-shadow:
+  0 0 0 200px inset var(--s,#0000),
+  0 0 0 var(--border) inset var(--color);
+  clip-path: 
+  polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+  100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+  );
+  }
+
+  
+
+
+
+}
+
+@media screen and (width <= 1000px) {
+  .carouselHome .right h1 {
+    font-size: 30px;
+  }
+  .carouselHome .right p {
+    font-size: 20px;
+    line-height:1.5;
+  }
+  .carouselHome .left .carouselHomeTitleLeft {
+    font-size: 50px;
+  }
+  .carouselHome .left .carouselIcon{
+    font-size: 200px;
+  }  
+}
+@media screen and (width <= 1450px) {
+  body .carouselHome h1 {
+    font-size: 30px;
+  }
+  
+  body .carouselHome p {
+    font-size: 25px;
+    line-height:1.5;
+  }
+  
+  
+  body .carouselHome {
+    --border: 1px;    
+    --slant: 5em;   
+    --color: #aec7e4; 
+    display:flex;	
+
+
+  margin-top: 5rem;
+    width: 80%;
+    position: relative;
+    clip-path: 
+      polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+      100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+      );
+      
+  }
+  .carouselHome::before {
+    content: '';
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background: 
+  linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
+  linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
+  background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+  background-repeat: no-repeat;
+  box-shadow:
+  0 0 0 200px inset var(--s,#0000),
+  0 0 0  var(--border) inset var(--color);
+  clip-path: 
+  polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+  100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+  );
+  
+  }
+  
+  .carouselHome .right {
+    width:50%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    color: #aec7e4;
+    align-items: center;
+    font-family: "Kode Mono", monospace;
+    margin-left: 50%;
+      
+  }
+  
+  .left {
+    height:100vh;
+    width:50%;
+    position: absolute;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    background-color:transparent;
+    
+  
+  }
+  .carouselHome .leftContent {
+  position: relative;
+  
+  height: 90%;
+  border-right: solid #aec7e4 ;
+  border-width: .1em;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  
+  
+  }
+  
+  .rightContent {
+    margin:auto;
+    width:80%;
+  
+  }
+  
+  .rightItem {
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+  
+  
+  .carouselIcons {
+    width:25vw;
+    height:25vw;
+    position:relative;
+    overflow:hidden;
+    margin-top: 0;
+    margin: auto;
+    color: #aec7e4;
+
+    
+  }
+  
+  .icondiv {
+    position:absolute;
+    width:100%;
+    height:100%;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    
+  }
+  .carouselHome .carouselIcon{
+    font-size: 300px;
+  }
+  
+  
+  
+  .blu {
+    background: #000;
+  }
+  .carouselHome .carouselHomeTitleLeft {
+    font-size: 60px;
+    font-family: "Kode Mono", monospace;
+    font-weight: 600;
+    color: #aec7e4;
+    margin: auto;
+    margin-bottom:0;
+
+    }
+}
+
+
+
+@media ( 1000px <=  width <= 1450px){
+  .navlink{
+    text-decoration: none;
+    display: inline;
+    font-size: 13px;
+    color: #aec7e4;
+    font-family: "Kode Mono", monospace;
+    
+    z-index: 1000;
+  }
+  .dropdown .navlinka {
+      cursor: pointer;
+      font-family: "Kode Mono", monospace;
+      font-size: 13px;
+      color: #aec7e4;
+      transition: all .3s;
+      display: flex;
+      
+  }
+  .nav_data img {
+    width: 150px;
+    padding: 0px 0px 0px 15px;
+    margin: 0;
+  }
+  
+}
+
+@media screen and (max-width: 1000px){
+  body .footcont {
+    margin-top: 10vh;
+    inset: 0;
+    position: relative;
+    width: 100%;
+  }
+  .header_b4:before{
+    --b:1px;
+    --s:5em;
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:-1;
+    overflow: hidden;
+    background:transparent;
+    --g1:#0000 0 calc(100% - var(--b)),#000 0;
+    --g2:#0000 0  calc(0.707*var(--s)), 
+         #000  0 calc(0.707*var(--s) + var(--b)),
+         #0000 0,
+         #000  0 ,
+         #0000 0;
+    -webkit-mask:none;
+  }
+  .header_b4{
+    --slant: 5em;  
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 6.1rem;
+    background-color:transparent;
+    width: 100vw;
+    -webkit-clip-path: none;
+    z-index: 0;
+    overflow: hidden;
+    transition: height 0.5s ease;
+    opacity:1;
+    visibility: visible;
+    }
+    header {
+      --slant: 5em;  
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 6.1rem;
+      background-color: rgba(0, 0, 0,  .9);
+      width: 100vw;
+      -webkit-clip-path: polygon(0 0, 
+      100% 0, 100% calc(100% - var(--slant)),
+      calc(100% - var(--slant)) 100%, 
+      var(--slant) 100%, 
+      0 calc(100% - var(--slant)) 
+      );
+
+      overflow: hidden;
+      transition: height 0.5s ease;
+     
+      
+    
+    
+    }
+    header:before{
+      --b:1px;
+      --s:5em;
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:-1;
+      overflow: hidden;
+      background:#aec7e4;
+      --g1:#0000 0 calc(100% - var(--b)),#000 0;
+      --g2:#0000 0  calc(0.707*var(--s)), 
+           #000  0 calc(0.707*var(--s) + var(--b)),
+           #0000 0,
+           #000  0 ,
+           #0000 0;
+      -webkit-mask:
+        linear-gradient(45deg ,var(--g2)),
+        linear-gradient(-45deg,var(--g2)),
+        linear-gradient(180deg,var(--g1)) 50%/calc(100% - 2*var(--s)) 100% no-repeat;
+    }
+
+
+.dropdown .navlinka {
+  cursor: pointer;
+  text-align: center;
+  justify-content: center;
+
+  font-family: "Kode Mono", monospace;
+  font-size: 30px;
+  color: #aec7e4;
+  transition: all .3s;
+  padding: 1rem;
+
+}
+
+.dropdown .navlinka:hover{
+  color: #fff;
+}
+.dropdown_arrow {
+  font-size: 2rem;
+  transform: rotate(0deg);
+  transition: all .3s ease;
+}
+
+.arrowRotate {
+  transform: rotate(180deg);
+  transition: all .3s ease;
+}
+.dropdown_link  {
+  color: #aec7e4;
+  text-decoration: none;
+  font-family: "Kode Mono", monospace;
+  padding: 1rem;
+  align-items: center;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  margin: 0px;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: transform .4s ease;
+  transition: color .3s, opacity .4s ease, transform .4s ease;
+
+}
+.dropdown_link:hover {
+  color: #fff;
+}
+.dropdown .dropdown_menu li {
+  list-style: none;
+  padding: 0;
+  height: max-content;
+
+
+}
+
+.menu li {
+text-align: center;
+padding: 0 40px;
+
+}
+
+.submenu .dropdown_link {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.dropdown_menu {
+
+  height: 0px;
+  overflow:hidden;
+  transition: height .4s ease ;
+  padding: 0.1rem 0;
+  border-bottom: #aec7e4 solid;
+  border-width: .1em;
+  position: relative;
+ 
+  width: 100%;
+
+}
+
+.submenu{
+  height: 125px;
+  overflow:visible ;
+}
+.headExpand2{
+  height: 70vh;
+  transition: height .3s ease-in-out;
+}
+
+.nav_toggle {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  --border: 1px;    
+  --slant: .5em;   
+  --color: #aec7e4; 
+  font-size: 16px;
+  padding: 0.4em 1.2em;
+  border: none;
+  cursor: pointer;
+  color: var(--color);
+  margin: 0 40px;
+  font-family: "Kode Mono", monospace;
+  background: 
+    linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
+    linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
+  background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+  background-repeat: no-repeat;
+  box-shadow:
+    0 0 0 200px inset var(--s,#0000),
+    0 0 0 var(--border) inset var(--color);
+  clip-path: 
+    polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+    100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+    );
+  transition: color var(--t,0.3s), background-size 0.3s;
+}
+.nav_toggle:focus-visible {
+  outline-offset: calc(-1*var(--border));
+  outline: var(--border) solid #000c;
+ clip-path: none;
+ background-size: 0 0;
+} 
+.nav_toggle:hover,
+.nav_toggle:active{
+   background-size: 100% 100%;
+   color: #000;
+  --t: 0.2s 0.1s;
+ }
+ .nav_toggle:active {
+  --s: #0005;
+  transition: none;
+}
+.burger,
+.close {
+position: absolute;
+width: max-content;
+height: max-content;
+inset: 0;
+margin: auto;
+font-size: 1rem;
+cursor: pointer;
+
+}
+
+
+
+.burger{
+opacity: 1;
+transform: rotate(0deg);
+transition: opacity .3s, transform .3s ease;
+
+}
+.close{
+opacity: 0;
+transform: rotate(0deg);
+transition:  opacity .3s, transform .3s ease;
+
+}
+
+.container {
+  max-width: 80%;
+  padding:1em 0;
+
+  margin: auto;
+}
+.menu {
+  position: absolute ;
+  left: 0;
+  top: 2.5rem;
+  width: 100%;
+  transition: top .4s, opacity .4s ease-out;
+  pointer-events: none;
+  opacity: 0;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  
+
+}
+.menu::-webkit-scrollbar {
+  width: 0;
+}
+.nav_links {
+  padding-top: 5rem;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+  width: 100%;
+  padding: 1rem;
+  
+
+  
+ 
+
+}
+
+
+.navlink{
+display: flex;
+justify-content: center;
+padding: 1rem ;
+text-align: center;
+align-items: center;
+list-style: none;
+font-size: 30px;
+color: #aec7e4;
+text-decoration: none;
+font-family: "Kode Mono", monospace;
+transition: color .3s;
+border-bottom: #aec7e4 solid;
+border-width: .1rem;
+
+
+
+}
+.nav_links li{
+width: 100%;
+height: max-content ;
+margin: auto;
+
+
+}
+
+
+.navlink:hover{
+color: #fff;
+}
+
+.show-menu {
+opacity: 1;
+pointer-events: initial;
+top: 3.5rem;
+
+}
+.show-icon .burger {
+opacity: 0;
+transform: rotate(90deg);
+transition: opacity.3s, transform.3s ease;
+}
+.show-icon .close {
+opacity: 1;
+transform: rotate(90deg);
+transition:  opacity.3s, transform.3s ease;
+}
+
+.head-expand {
+height: 55vh;
+transition: height .4s ease-in-out;
+}
+.nav_data{
+height: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+display: flex;
+width: 100%;
+}
+.button .donate {
+font-size: 25px;
+position: relative;
+
+}
+.button {
+
+
+width: 100%;
+padding-top: 1rem;
+}
+
+.nav_data img {
+width: 150px;
+padding: 0;
+margin: 0;
+}
+
+.footer_content .top .foot_social  {
+  display: flex;
+  flex-wrap: wrap;
+
+  max-width: 100%;
+  
+  }
+  footer .footer_content .foot_cred {
+    font-size: 10px;
+  }
+  footer{
+    padding: 10px 3% 1px;
+  }
+  footer .logo_footer {
+    width: 150px;
+    padding: 0;
+    margin: 0;
+  }
+
+
+}
+@media screen and (max-width: 780px) {
+.container {
+  max-width: 75%;
+  padding:1em 0;
+
+  margin: auto;
+}
+footer .footer_content .foot_cred p{
+  font-size: 9px;
+}
+footer .logo_footer {
+  width: 100px;
+  padding: 0;
+  margin: 0;
+}
+footer .footer_content .top .foot_social .icons {
+  font-size: 12px;
+  line-height: 30px;
+  height: 30px;
+  width: 30px;
+}
+
+footer .footer_content .foot_cred {
+  font-size: 9px;
+}
+body footer {
+  padding: 0px 3% 0px;
+}
+footer .foot_donate  {
+  padding: 0.4em 1.2em;
+  font-size: 13px;
+}
+
+
+
+}
+
+@media screen and (max-width: 631px) {
+  footer .footer_content .top .foot_social .icons {
+    font-size: 12px;
+    line-height: 25px;
+    height: 25px;
+    width: 25px;
+  }
+  footer .footer_content .foot_cred p,a{
+    font-size: 7px;
+  }
+
+
+}
+
+
+
+
+
+.button .donate  {
+--border: 1px;    
+--slant: .5em;   
+--color: #aec7e4; 
+font-size: 16px;
+text-decoration: none;
+border: none;
+padding: 0.5em 1.2em;
+border: none;
+cursor: pointer;
+color: var(--color);
+cursor: pointer;
+font-family: "Kode Mono", monospace;
+background: 
+  linear-gradient(to bottom left,var(--color)  50%,#00000000 50.1%) top right,
+  linear-gradient(to top   right,var(--color)  50%,#00000000 50.1%) bottom left;
+background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+background-repeat: no-repeat;
+box-shadow:
+  0 0 0 200px inset var(--s,#0000),
+  0 0 0 var(--border) inset var(--color);
+clip-path: 
+  polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+  100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+  );
+transition: color var(--t,0.3s), background-size 0.3s;
+}
+.button .donate:focus-visible {
+outline-offset: calc(-1*var(--border));
+ outline: var(--border) solid #000c;
+clip-path: none;
+background-size: 0 0;
+}
+.button .donate:hover,
+.button .donate:active{
+ background-size: 100% 100%;
+ color: #000;
+--t: 0.2s 0.1s;
+}
+.button .donate:active {
+--s: #0005;
+transition: none;
+}
+
+
+.footcont {
+  inset: 0;
+  position: relative;
+  width: 100%;
+  margin-top: 100px;
+  bottom: 0;
+
+}
+
+footer {
+--slant: 5em;  
+position: relative;
+bottom: 0;
+left: 0;
+right: 0;
+width: 100%;
+scroll-snap-align: end;
+
+/* margin-top: 100vh; */
+display: flex;
+background: rgba(0, 0, 0,  .9);
+text-align: center;
+z-index: 0;
+padding: 20px 3% 20px;
+clip-path: polygon(var(--slant) 0, 
+calc(100% - var(--slant)) 0, 100% var(--slant),
+  100% 100%, 
+  0 100%, 
+  0 var(--slant)
+ );
+}
+
+footer:before {
+--b:1px;
+--s:5em;
+content:"";
+position:absolute;
+inset:0;
+z-index:-1;
+background: #aec7e4;
+--g1:#000 var(--b),#0000 0 calc(100% - var(--b)); 
+--g2:#0000 0, 
+     #000  0,
+     #0000 0 calc(100% - 0.707*var(--s) - var(--b)),
+     #000  0 calc(100% - 0.707*var(--s)),
+     #0000 0;
+-webkit-mask:
+  linear-gradient(45deg ,var(--g2)),
+  linear-gradient(-45deg,var(--g2)),
+  linear-gradient(180deg,var(--g1)) 50%/calc(100% - 2*var(--s)) 100% no-repeat;  
+}
+footer .footer_content {
+max-width: 1800px;
+margin: auto;
+padding: 20px 30px 10px 30px;
+width:100% ;
+
+}
+
+.footer_content .top {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0px 0px 20px 0px;
+
+}
+
+
+.logo_footer {
+width: 200px;
+padding: 0;
+margin: 0;
+}
+
+
+.footer_content .top .foot_social  {
+display: flex;
+flex-wrap: wrap;
+
+width: max-content;
+
+}
+.footer_content .top .foot_social .icons {
+--border: 1px;    
+--slant: .5em;   
+--color: #aec7e4; 
+color: #aec7e4;
+height: 40px;
+width: 40px;
+margin: 0 8px;
+text-align: center;
+line-height: 40px;
+font-size: 17px;
+text-decoration: none;
+background: 
+linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
+linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
+background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+background-repeat: no-repeat;
+box-shadow:
+0 0 0 200px inset var(--s,#0000),
+0 0 0 var(--border) inset var(--color);
+clip-path: 
+polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+);
+transition: color var(--t,0.3s), background-size 0.3s;
+border: none;
+margin: 5px 5px;
+
+}
+
+.footer_content .top .foot_social .icons:focus-visible {
+outline-offset: calc(-1*var(--border));
+ outline: var(--border) solid #000c;
+clip-path: none;
+background-size: 0 0;
+}
+.footer_content .top .foot_social .icons:hover,
+.footer_content .top .foot_social .icons:active{
+ background-size: 100% 100%;
+ color: #000;
+--t: 0.2s 0.1s;
+}
+.footer_content .top .foot_social .icons :active {
+--s: #0005;
+transition: none;
+}
+.footer_content .top .foot_donate  {
+--border: 1px;    
+--slant: .5em;   
+--color: #aec7e4; 
+font-size: 16px;
+padding: 0.5em 1.2em;
+font-family: "Kode Mono", monospace;
+border: none;
+cursor: pointer;
+text-decoration: none;
+color: var(--color);
+background: 
+  linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
+  linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
+background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+background-repeat: no-repeat;
+box-shadow:
+  0 0 0 200px inset var(--s,#0000),
+  0 0 0 var(--border) inset var(--color);
+clip-path: 
+  polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+  100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+  );
+transition: color var(--t,0.3s), background-size 0.3s;
+}
+footer .footer_content .top .foot_donate :focus-visible {
+outline-offset: calc(-1*var(--border));
+ outline: var(--border) solid #000c;
+clip-path: none;
+background-size: 0 0;
+}
+footer .footer_content .top .foot_donate:hover,
+footer .footer_content .top .foot_donate:active{
+ background-size: 100% 100%;
+ color: #000;
+--t: 0.2s 0.1s;
+}
+footer .footer_content .top .foot_donate:active {
+--s: #0005;
+transition: none;
+}
+
+.footer_content .foot_cred {
+border-top: solid;
+border-width: 1px;
+width: 100%;
+color: #aec7e4;
+display: flex;
+justify-content: center;
+text-align: center;
+padding: 20px 10px 0px 10px;
+font-family: "Kode Mono", monospace;
+font-size: 12px;
+}
+.footer_content .foot_cred p{
+margin: 0px 1rem;
+}
+.footer_content .foot_cred a {
+text-decoration: underline;
+color: #aec7e4;
+margin: 0px 1rem;
+}
+
+
+.canvas {
+position:fixed;
+z-index: -2;
+
+}
+
+
+::-webkit-scrollbar {
+width: 0em;
+}
+::-webkit-scrollbar-track {
+background:rgba(0, 0, 0,  .9);
+}
+
+
+  .container1 {
+    position: relative;
+    margin: 8.5rem 5% 0rem 5% ;
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    inset: 0;
+    z-index: 1;
+    scroll-snap-align: center;
+    overflow: visible;
+  }
+  
+   .home1 {
+    --border: 1px;    
+    --slant: 5em;   
+    --color: #aec7e4; 
+    background-color: rgba(0, 0, 0,  .9);
+    margin: auto;
+    position:relative;
+  
+    display: flex;
+    padding: 0 ;
+    height: 800px;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    clip-path: 
+    polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+    100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+    );
+    
+  
+  }
+  .home1::before {
+    content: '';
+    position:absolute;
+    inset:0;
+    z-index:-1;
+    background: 
+    linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
+    linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
+    background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+    background-repeat: no-repeat;
+    box-shadow:
+    0 0 0 200px inset var(--s,#0000),
+    0 0 0 var(--border) inset var(--color);
+    clip-path: 
+    polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+    100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+    );
+  }
+  .portfolio {
+    --border: 1px;    
+    --slant: 5em;   
+    --color: #aec7e4; 
+   
+    margin: auto;
+    position:relative;
+    flex-direction: column;
+    display: flex;
+    padding: 3rem 0rem ;
+    height: fit-content;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .portfolio::before {
+    content: '';
+    position:absolute;
+    inset:0;
+    z-index:-1;
+    background: 
+    linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
+    linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
+    background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+    background-repeat: no-repeat;
+    box-shadow:
+    0 0 0 200px inset var(--s,#0000),
+    0 0 0 var(--border) inset var(--color);
+    clip-path: 
+    polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+    100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+    );
+  }
+  .portShadow {
+    --slant: 5em;   
+    position: relative;
+    transform: translateY(-136px);
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    clip-path: 
+  polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+  100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+  );
+    background: rgba(0, 0, 0, .9);
+  }
+  .home1text {
+  
+    font-family: "Kode Mono", monospace;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 700px;
+    justify-content: center;
+    padding: 0 5rem;
+    border-right: solid #aec7e4;
+    border-width: .1em;
+    overflow: hidden;
+  }
+  .home1text h2 {
+    font-size: 80px;
+    color: #fff;
+  }
+  .home1text h1 {
+    font-size: 150px;
+    line-height: 7.5rem;
+     color: #aec7e4;
+    font-family: kremlin, sans-serif;
+    cursor: default;
+  }
+  .home1text h3 {
+    font-size: 15px;
+    color: #fff;
+    padding: 3px 0px;
+  }
+  .home1text p {
+    font-size: 12px;
+    padding: 3px 0px;
+  }
+  .home1text p > a {
+   color: #aec7e4;
+  }
+  .home1text h3 > a {
+    font-size: 10px;
+  }
+  .home1text2 {
+  
+    font-family: "Kode Mono", monospace;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 700px;
+    justify-content: center;
+    padding: 0 5rem;
+    overflow: hidden;
+    border-left: solid #aec7e4;
+    border-width: .1em;
+  }
+  .home1text2 h1 {
+    font-size: 60px;
+    line-height: 3.5rem;
+     color: #aec7e4;
+    font-family:"Kode Mono", monospace;
+    cursor: default;
+  
+  }
+  .home1text2 h3 {
+    font-size: 20px;
+    color: #fff;
+    padding: 3px 0px;
+    margin-top: 1em;
+  }
+  .home1text2 p {
+    font-size: 20px;
+    padding: 3px 0px;
+    margin-bottom: 1em;
+  }
+  .home1text3 {
+  
+    font-family: "Kode Mono", monospace;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 700px;
+    justify-content: center;
+    padding: 0 5rem;
+    overflow: hidden;
+    border-right: solid #aec7e4;
+    border-width: .1em;
+  }
+  .home1text3 h1 {
+    font-size: 60px;
+    line-height: 3rem;
+     color: #aec7e4;
+    font-family:"Kode Mono", monospace;
+    cursor: default;
+  
+  }
+  .home1text3 h3 {
+    font-size: 20px;
+    color: #fff;
+    padding: 3px 0px;
+    margin-top: 1em;
+  }
+  .home1text3 p {
+    font-size: 20px;
+    padding: 3px 0px;
+    margin-bottom: 1em;
+  }
+
+  
+  
+  
+  .home1text .portBut {
+  --border: 1px;    
+  --slant: .5em;   
+  --color: #aec7e4; 
+  font-size: 16px;
+  width: 85%;
+  padding: 0.5em 1.2em;
+  text-decoration: none;
+  font-family: "Kode Mono", monospace;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--color);
+  text-align: center;
+  background:  linear-gradient(to bottom left,var(--color)  50%,#00000000 50.1%) top right,
+  linear-gradient(to top   right,var(--color)  50%,#00000000 50.1%) bottom left;
+  background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+  background-repeat: no-repeat;
+  box-shadow:
+    0 0 0 200px inset var(--s,#0000),
+    0 0 0 var(--border) inset var(--color);
+  clip-path: 
+    polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+    100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+    );
+  transition: color var(--t,0.3s), background-size 0.3s;
+  }
+  
+  
+  .home1text .portBut:focus-visible {
+    outline-offset: calc(-1*var(--border));
+     outline: var(--border) solid #000c;
+    clip-path: none;
+    background-size: 0 0;
+    }
+    .home1text .portBut:hover,
+    .home1text .portBut:active{
+     background-size: 100% 100%;
+     color: #000;
+    --t: 0.2s 0.1s;
+    }
+    .home1text .portBut:active {
+    --s: #0005;
+    transition: none;
+    }
+  .home1text2 .portBut {
+  --border: 1px;    
+  --slant: .5em;   
+  --color: #aec7e4; 
+  font-size: 16px;
+  width: 25%;
+  padding: 0.5em 1.2em;
+  text-decoration: none;
+  font-family: "Kode Mono", monospace;
+  border: none;
+  margin-top: 3em;
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--color);
+  text-align: center;
+  background:  linear-gradient(to bottom left,var(--color)  50%,#00000000 50.1%) top right,
+  linear-gradient(to top   right,var(--color)  50%,#00000000 50.1%) bottom left;
+  background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+  background-repeat: no-repeat;
+  box-shadow:
+    0 0 0 200px inset var(--s,#0000),
+    0 0 0 var(--border) inset var(--color);
+  clip-path: 
+    polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+    100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+    );
+  transition: color var(--t,0.3s), background-size 0.3s;
+  }
+  
+  
+  .home1text2 .portBut:focus-visible {
+    outline-offset: calc(-1*var(--border));
+     outline: var(--border) solid #000c;
+    clip-path: none;
+    background-size: 0 0;
+    }
+    .home1text2 .portBut:hover,
+    .home1text2 .portBut:active{
+     background-size: 100% 100%;
+     color: #000;
+    --t: 0.2s 0.1s;
+    }
+    .home1text2 .portBut:active {
+    --s: #0005;
+    transition: none;
+    }
+  
+  .home1text3 .portBut {
+  --border: 1px;    
+  --slant: .5em;   
+  --color: #aec7e4; 
+  font-size: 16px;
+  width: 25%;
+  padding: 0.5em 1.2em;
+  text-decoration: none;
+  font-family: "Kode Mono", monospace;
+  border: none;
+  margin-top: 3em;
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--color);
+  text-align: center;
+  background:  linear-gradient(to bottom left,var(--color)  50%,#00000000 50.1%) top right,
+  linear-gradient(to top   right,var(--color)  50%,#00000000 50.1%) bottom left;
+  background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+  background-repeat: no-repeat;
+  box-shadow:
+    0 0 0 200px inset var(--s,#0000),
+    0 0 0 var(--border) inset var(--color);
+  clip-path: 
+    polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+    100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+    );
+  transition: color var(--t,0.3s), background-size 0.3s;
+  }
+  
+  
+  .home1text3 .portBut:focus-visible {
+    outline-offset: calc(-1*var(--border));
+     outline: var(--border) solid #000c;
+    clip-path: none;
+    background-size: 0 0;
+    }
+    .home1text3 .portBut:hover,
+    .home1text3 .portBut:active{
+     background-size: 100% 100%;
+     color: #000;
+    --t: 0.2s 0.1s;
+    }
+    .home1text3 .portBut:active {
+    --s: #0005;
+    transition: none;
+    }
+  
+  
+  
+  .home1graphic {
+    --border: 1px;    
+    --slant: 5em;   
+    --color: #aec7e4; 
+
+    position: absolute;
+    display: flex;
+    overflow: visible;
+    margin: 0 5rem;
+    right: 0;
+    height: 90%;
+    justify-content: center;
+    width: 40%;
+    
+  
+  }
+  .home1graphic::before {
+    content: '';
+    position:absolute;
+    inset:0;
+    z-index:-1;
+    background: 
+    linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
+    linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
+    background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+    background-repeat: no-repeat;
+    box-shadow:
+    0 0 0 200px inset var(--s,#0000),
+    0 0 0 var(--border) inset var(--color);
+    clip-path: 
+    polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+    100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+    );
+  }
+  .home1graphicQr {
+    --border: 1px;    
+    --slant: 5em;   
+    --color: #aec7e4; 
+    width: 90%;
+    position: absolute;
+    display: flex;
+    overflow: hidden;
+    margin: 0 5rem;
+    right: 0;
+    padding: 3em;
+    justify-content: center;
+    width: fit-content;
+    clip-path: 
+    polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+    100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+    );
+  
+  }
+  .home1graphicQr::before {
+    content: '';
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:-1;
+    background: 
+    linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
+    linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
+    background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+    background-repeat: no-repeat;
+    box-shadow:
+    0 0 0 200px inset var(--s,#0000),
+    0 0 0 var(--border) inset var(--color);
+    clip-path: 
+    polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+    100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+    );
+  }
+  .home1graphicQr img {
+    height: 600px;
+    display: flex;
+    margin: auto;
+    z-index: -2;
+  }
+  .home1graphic2 {
+    --border: 1px;    
+    --slant: 5em;   
+    --color: #aec7e4; 
+
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    margin: auto;
+    right: 0;
+    align-items: center;
+    height: 90%;
+    width: fit-content;
+    justify-content: center;
+    width: 40%;
+    clip-path: 
+    polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+    100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+    );
+  
+  }
+  .home1graphic2::before {
+    content: '';
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:-1;
+    background: 
+    linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
+    linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
+    background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+    background-repeat: no-repeat;
+    box-shadow:
+    0 0 0 200px inset var(--s,#0000),
+    0 0 0 var(--border) inset var(--color);
+    clip-path: 
+    polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+    100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+    );
+  }
+  .home1graphic img {
+
+    object-fit: cover;
+    z-index: -2;
+  }
+
+  .home1graphic2 img {
+
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
+  
+
+
+
+ @media screen and (max-width: 1450px) {
+  .container1 {
+    position: relative;
+    inset: 0;
+    margin: 8.5rem 10% 0rem 10%;
+    background-color: transparent;
+    height: 100%;
+    width: 80%;
+  }
+  .home1 {
+    --border: 1px;    
+    --slant: 5em;   
+    --color: #aec7e4; 
+    background-color: rgba(0, 0, 0,  .9);
+    margin: auto;
+    position:relative;
+
+    display: flex;
+    inset: 0;
+    flex-direction: column;
+    padding: 0 ;
+    height: 800px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    clip-path: 
+    polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+    100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+    );
+  
+  }
+  .home1::before {
+    content: '';
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:-1;
+    background: 
+    linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
+    linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
+    background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+    background-repeat: no-repeat;
+    box-shadow:
+    0 0 0 200px inset var(--s,#0000),
+    0 0 0 var(--border) inset var(--color);
+    clip-path: 
+    polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+    100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+    );
+    }
+    .home1text {
+    
+      font-family: "Kode Mono", monospace;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      height: 90%;
+      justify-content: center;
+      padding: 0 5rem;
+      border-right: none #aec7e4;
+      border-bottom: solid #aec7e4;
+      border-width: .1em;
+    
+      overflow: hidden;
+      text-align: center;
+      align-items: center;
+    }
+    .home1text h2 {
+      font-size: 60px;
+    }
+    .home1text h1 {
+      font-size: 90px;
+      line-height: 7.5rem;
+       color: #aec7e4;
+      font-family: kremlin, sans-serif;
+    }
+    .home1text h3 {
+      font-size: 15px;
+      color: #fff;
+      padding: 3px 0px;
+    }
+    .home1text p {
+      font-size: 12px;
+      padding: 3px 0px;
+    }
+    .home1text p > a {
+     color: #aec7e4;
+    }
+    .home1text h3 > a {
+      font-size: 10px;
+    }
+    .home1text2 {
+    
+      font-family: "Kode Mono", monospace;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      height: 90%;
+      justify-content: center;
+      padding: 0 5rem;
+      border-left: none #aec7e4;
+      border-top: solid #aec7e4;
+      border-width: .1em;
+    
+      overflow: hidden;
+      text-align: center;
+      align-items: center;
+    }
+
+    .home1text2 h1 {
+      font-size: 30px;
+      line-height: 2rem;
+       color: #aec7e4;
+      font-family: "Kode Mono", monospace;
+    }
+    .home1text2 h3 {
+      font-size: 15px;
+      color: #fff;
+      padding: 3px 0px;
+    }
+    .home1text2 p {
+      font-size: 12px;
+      padding: 3px 0px;
+    }
+    .home1text3 {
+    
+      font-family: "Kode Mono", monospace;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      height: 50%;
+      justify-content: center;
+      padding: 0 5rem;
+      border-right: none #aec7e4;
+      border-bottom: solid #aec7e4;
+      border-width: .1em;
+    
+      overflow: hidden;
+      text-align: center;
+      align-items: center;
+    }
+
+    .home1text3 h1 {
+      font-size: 30px;
+      line-height: 2rem;
+       color: #aec7e4;
+      font-family: "Kode Mono", monospace;
+    }
+    .home1text3 h3 {
+      font-size: 15px;
+      color: #fff;
+      padding: 3px 0px;
+    }
+    .home1text3 p {
+      font-size: 12px;
+      padding: 3px 0px;
+    }
+
+ 
+    
+    
+    
+    
+    .home1text .portBut {
+    --border: 1px;    
+    --slant: .5em;   
+    --color: #aec7e4; 
+    font-size: 16px;
+    width: 85%;
+    padding: 0.5em 1.2em;
+    text-decoration: none;
+    font-family: "Kode Mono", monospace;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    color: var(--color);
+    text-align: center;
+    background:  linear-gradient(to bottom left,var(--color)  50%,#00000000 50.1%) top right,
+    linear-gradient(to top   right,var(--color)  50%,#00000000 50.1%) bottom left;
+    background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+    background-repeat: no-repeat;
+    box-shadow:
+      0 0 0 200px inset var(--s,#0000),
+      0 0 0 var(--border) inset var(--color);
+    clip-path: 
+      polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+      100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+      );
+    transition: color var(--t,0.3s), background-size 0.3s;
+    }
+    
+    
+    .home1text .portBut:focus-visible {
+      outline-offset: calc(-1*var(--border));
+       outline: var(--border) solid #000c;
+      clip-path: none;
+      background-size: 0 0;
+      }
+      .home1text .portBut:hover,
+      .home1text .portBut:active{
+       background-size: 100% 100%;
+       color: #000;
+      --t: 0.2s 0.1s;
+      }
+      .home1text .portBut:active {
+      --s: #0005;
+      transition: none;
+      }
+    .home1text2 .portBut {
+    --border: 1px;    
+    --slant: .5em;   
+    --color: #aec7e4; 
+    font-size: 12px;
+    width: 20%;
+    padding: 0.5em 1.2em;
+    text-decoration: none;
+    font-family: "Kode Mono", monospace;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    color: var(--color);
+    text-align: center;
+    background:  linear-gradient(to bottom left,var(--color)  50%,#00000000 50.1%) top right,
+    linear-gradient(to top   right,var(--color)  50%,#00000000 50.1%) bottom left;
+    background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+    background-repeat: no-repeat;
+    box-shadow:
+      0 0 0 200px inset var(--s,#0000),
+      0 0 0 var(--border) inset var(--color);
+    clip-path: 
+      polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+      100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+      );
+    transition: color var(--t,0.3s), background-size 0.3s;
+    }
+    
+    
+    .home1text2 .portBut:focus-visible {
+      outline-offset: calc(-1*var(--border));
+       outline: var(--border) solid #000c;
+      clip-path: none;
+      background-size: 0 0;
+      }
+      .home1text2 .portBut:hover,
+      .home1text2 .portBut:active{
+       background-size: 100% 100%;
+       color: #000;
+      --t: 0.2s 0.1s;
+      }
+      .home1text2 .portBut:active {
+      --s: #0005;
+      transition: none;
+      }
+
+    .home1graphic {
+    --border: 1px;    
+    --slant: 5em;   
+    --color: #aec7e4; 
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    margin: 2rem 5rem;
+    right: 0;
+    height: 100%;
+    justify-content: center;
+    width: fit-content;
+    clip-path: 
+    polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+    100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+    );
+  
+  }
+  .home1graphic::before {
+    content: '';
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:-1;
+    background: 
+    linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
+    linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
+    background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+    background-repeat: no-repeat;
+    box-shadow:
+    0 0 0 200px inset var(--s,#0000),
+    0 0 0 var(--border) inset var(--color);
+    clip-path: 
+    polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+    100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+    );
+  }
+  .home1graphic img {
+    
+    object-fit: cover;
+    z-index: -2;
+  }
+  .home1 .home1graphicQr {
+    --border: 1px;    
+    --slant: 5em;   
+    --color: #aec7e4; 
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    margin:auto;
+    right: 0;
+    padding: 1rem;
+    justify-content: center;
+    width: 45%;
+    height: 45%;
+    align-items: center;
+    clip-path: 
+    polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+    100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+    );
+  
+  }
+  .home1graphicQr::before {
+    content: '';
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:-1;
+    background: 
+    linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
+    linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
+    background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+    background-repeat: no-repeat;
+    box-shadow:
+    0 0 0 200px inset var(--s,#0000),
+    0 0 0 var(--border) inset var(--color);
+    clip-path: 
+    polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+    100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+    );
+  }
+  .home1graphicQr img {
+    height: 90%;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    object-fit: cover;
+    justify-content: center;
+    z-index: -2;
+  }
+        .home1graphic2 {
+    --border: 1px;    
+    --slant: 5em;   
+    --color: #aec7e4; 
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    margin: 2rem 5rem;
+    right: 0;
+    height: 100%;
+    justify-content: center;
+    width: fit-content;
+    clip-path: 
+    polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+    100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+    );
+  
+  }
+  .home1graphic2::before {
+    content: '';
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:-1;
+    background: 
+    linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
+    linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
+    background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+    background-repeat: no-repeat;
+    box-shadow:
+    0 0 0 200px inset var(--s,#0000),
+    0 0 0 var(--border) inset var(--color);
+    clip-path: 
+    polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+    100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+    );
+  }
+  .home1graphic2 img {
+
+    object-fit: cover;
+    z-index: -2;
+  }
+
+
+
+  .home1 .faq .faq_ul li > h2 {
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    display: block;
+    background-color:transparent;
+    margin: 0;
+    cursor: pointer;
+  }
+  
+  .home1 .faq .faq_ul li > p {
+    color: white;
+    font-size: 12px;
+    line-height: 26px;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    max-height: 800px;
+    opacity: 1;
+    transform: translate(0, 0);
+    margin-top: 14px;
+    z-index: 2;
+  }
+  .home1 .faq_ul li i {
+    position: absolute;
+    transform: translate(-6px, 0);
+    margin-top: 5px;
+    right: 0;
+    color: #aec7e4;
+    font-size: 15px;
+    font-weight: 600;
+    transform: rotate(180deg);
+    transition: all .3s;
+  }
+}
+
+
+
+
+
+
+
+.shuffle.completed {
+  animation: blink-shuffle 1s linear 0s 1 alternate;
+}
+
+@keyframes blink-shuffle {
+  0% {
+    color: #aec7e4;
+    text-shadow: 0 0 20px rgb(174, 199, 228);
+  }
+}
+
+
+
+
+
+
+
+.carouselHome h1 {
+  font-size: 60px;
+  
+}
+
+.carouselHome p {
+  font-size: 25px;
+	line-height:1.5;
+  color: #fff;
+}
+
+.shadowContainer {
+  position: absolute;
+  inset: 0;
+}
+.carouselShadow {
+  --slant: 5em;   
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; 
+  clip-path: 
+polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+);
+  background: rgba(0, 0, 0, .9);
+}
+.carouselHome {
+  --border: 1px;    
+  --slant: 5em;   
+  --color: #aec7e4; 
+  display:flex;	
+  margin-top: 8.5rem;
+  scroll-snap-align: start;
+ 
+
+  width: 90%;
+
+  position:relative;
+  clip-path: 
+    polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+    100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+    );
+    
+}
+.carouselHome::before {
+  content: '';
+position:absolute;
+inset:0;
+z-index:-1;
+background: 
+linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
+linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
+background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+background-repeat: no-repeat;
+box-shadow:
+0 0 0 200px inset var(--s,#0000),
+0 0 0  var(--border) inset var(--color);
+clip-path: 
+polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+);
+
+}
+
+
+
+.right {
+	width:50%;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	color: #aec7e4;
+	font-family: "Kode Mono", monospace;
+  margin-left: 50%;
+ 
+  scroll-snap-type: y proximity;
+		
+}
+
+.left {
+	height:100vh;
+	width:50%;
+  position: absolute;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items: center;
+	background-color:transparent;
+ 
+  
+
+}
+.leftContent {
+position: relative;
+
+height: 90%;
+width: 100%;
+border-right: solid #aec7e4 ;
+border-width: .1em;
+align-items: center;
+justify-content: center;
+display: flex;
+flex-direction: column;
+scroll-snap-type: y proximity;
+
+}
+
+.rightContent {
+	margin:auto;
+	width:80%;
+  
+}
+
+.rightItem {
+	min-height:100vh;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+  scroll-snap-align: center;
+  gap: 3em;
+}
+.rightItem h3 {
+  color: #fff;
+}
+
+.carouselIcons {
+  --border: 1px;    
+  --slant: 5em;   
+  --color: #aec7e4; 
+	width:55%;
+	height:55%;
+	position:relative;
+	overflow:hidden;
+	margin-top: 0;
+	margin: auto;
+  right: 0;
+  color: #aec7e4;
+  align-items: center;
+  justify-content: center;
+  clip-path: 
+  polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+  100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+  );
+	
+}
+.carouselIcons::before {
+  content: '';
+  position:absolute;
+  inset:0;
+  z-index:1;
+  background: 
+  linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
+  linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
+  background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+  background-repeat: no-repeat;
+  box-shadow:
+  0 0 0 200px inset var(--s,#0000),
+  0 0 0 var(--border) inset var(--color);
+  clip-path: 
+  polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+  100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+  );
+}
+.carouselGraphics {
+  --border: 1px;    
+  --slant: 5em;   
+  --color: #aec7e4; 
+	width:75%;
+	height:75%;
+	position:relative;
+	overflow:hidden;
+	margin-top: 0;
+	margin: auto;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+  clip-path: 
+  polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+  100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+  );
+	
+}
+.carouselGraphics::before {
+  content: '';
+  position:absolute;
+  inset:0;
+  z-index:1;
+  background: 
+  linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
+  linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
+  background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+  background-repeat: no-repeat;
+  box-shadow:
+  0 0 0 200px inset var(--s,#0000),
+  0 0 0 var(--border) inset var(--color);
+  clip-path: 
+  polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+  100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+  );
+}
+
+.icondiv {
+	position:absolute;
+	width:100%;
+	height:100%;
+	text-align: center;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+  scroll-snap-align: start;
+	
+}
+.carouselIcon{
+	font-size: 450px;
+}
+.carouselGraphic {
+  height: 100%;
+}
+
+
+.blu {
+	background: #000;
+  z-index: -1;
+}
+.carouselHomeTitleLeft {
+	font-size: 110px;
+	font-family: "Kode Mono", monospace;
+	font-weight: 600;
+	color: #aec7e4;
+	margin: auto;
+	margin-bottom:0;
+  padding: 0% 10%;
+
+}
+
+.transition, .faq_ul li i:before, .faq_ul li i:after, p {
+  transition: all 0.25s ease-in-out;
+}
+.faq {
+  min-height: 0;
+  display: inline-block;
+  position: relative;
+  font-family: "Kode Mono", monospace;
+  margin: auto;
+  background-color: transparent;
+  max-width: 800px;
+  padding: 30px;
+}
+@media (max-width: 550px) {
+  .faq {
+    box-sizing: border-box;
+    transform: translate(0, 0);
+    max-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    left: 0;
+  }
+}
+
+.faq    h2 {
+  color: #aec7e4;
+}
+
+
+.faq .faq_ul li > h2 {
+  font-size: 26px;
+  line-height: 34px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  display: block;
+  background-color:transparent;
+  margin: 0;
+  cursor: pointer;
+}
+
+.faq .faq_ul li > p {
+  color: white;
+  font-size: 17px;
+  line-height: 26px;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  max-height: 800px;
+  opacity: 1;
+  transform: translate(0, 0);
+  margin-top: 14px;
+  z-index: 2;
+}
+
+.faq_ul {
+  list-style: none;
+  perspective: 900;
+  padding: 0;
+  margin: 0;
+}
+.faq_ul li {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 4px;
+  padding-top: 18px;
+  border-bottom: .1em solid #fff;
+}
+
+.faq_ul li i {
+  position: absolute;
+  transform: translate(-6px, 0);
+  margin-top: 5px;
+  right: 0;
+  color: #aec7e4;
+  font-size: 25px;
+  font-weight: 600;
+  transform: rotate(180deg);
+  transition: all .3s;
+}
+
+
+
+.faq_ul li input[type=checkbox] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+}
+.faq_ul li input[type=checkbox]:checked ~ p {
+  margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+  transform: translate(0, 50%);
+}
+.faq_ul li input[type=checkbox]:checked ~ i {
+  transform:  rotate(0deg);
+}
+
+.resume  a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition-duration: 0.3s;
+
+}
+
+.resume  ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.resume  h3 {
+  color: #aec7e4;
+  margin: 10px 0;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.resume {
+  --border: 1px;    
+  --slant: 5em;   
+  --color: #aec7e4; 
+  width: 90%;
+  background: rgba(0, 0, 0,  .9);
+  margin: 20px 5em;
+  border: none;
+  position: relative;
+  font-family: "Kode Mono", monospace;
+  display: flex;
+  margin-top: 10em;
+  scroll-snap-align: center;
+  height: 100%;
+  clip-path: 
+    polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+    100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+    );
+}
+.resume::before {
+  content: '';
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background: 
+  linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
+  linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
+  background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+  background-repeat: no-repeat;
+  box-shadow:
+  0 0 0 200px inset var(--s,#0000),
+  0 0 0 var(--border) inset var(--color);
+  clip-path: 
+  polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+  100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+  );
+}
+
+.resume::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.resume .base, .resume .func {
+  box-sizing: border-box;
+  float: left;
+}
+.resume .base > div, .resume .func > div {
+  padding-bottom: 10px;
+}
+.resume .base > div:last-of-type, .resume .func > div:last-of-type {
+  padding-bottom: 1px;
+}
+.resume .base {
+  width: 500px;
+  padding: 30px 15px;
+  border-right: solid #aec7e4;
+  border-width: .1em;
+}
+.resume .base .profile {
+
+  padding: 30px 15px 5px 15px;
+  margin: -30px -15px 20px -15px;
+  position: relative;
+  z-index: 0;
+  border-bottom: solid #aec7e4;
+  border-width: .1em;
+  height: 290px;
+}
+
+.resume .base .profile .photo img {
+  width: 200px;
+  border-radius: 50%;
+  border: #aec7e4 solid;
+  border-width: .1em;
+  margin: auto;
+  display: flex;
+}
+.resume .base .profile .info {
+  text-align: center;
+  color: #aec7e4;
+}
+.resume .base .profile .info .name {
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 1.5em;
+  font-weight: normal;
+}
+.resume .base .contact div {
+  line-height: 24px;
+}
+.resume .base .contact div a:hover {
+  color: #aec7e4;
+}
+.resume .base .contact div a:hover span::after {
+  width: 100%;
+}
+.resume .base .contact div:hover i {
+  color: #aec7e4;
+}
+.resume .base .contact div i {
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  text-align: center;
+  margin-right: 15px;
+  transition-duration: 0.3s;
+}
+.resume .base .contact div span {
+  position: relative;
+}
+.resume .base .contact div span::after {
+  content: "";
+  position: absolute;
+  background: #aec7e4;
+  height: 1px;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  transition-duration: 0.3s;
+}
+
+.resume .base .contact > .call, .address, .email, .website {
+  font-size: 20px;
+  margin: .2em 0;
+}
+
+.resume .base .follow .box {
+  text-align: center;
+  vertical-align: middle;
+  max-width: 95%;
+  align-items: center;
+  margin: auto;
+  
+}
+.resume .base .follow .box a {
+  display: inline-block;
+  vertical-align: text-bottom;
+  color: #aec7e4;
+}
+.resume .base .follow .box a:hover i {
+  background-size: 100% 100%;
+  color: #000;
+ --t: 0.2s 0.1s;
+}
+
+.resume .base .follow .box i {
+  --border: 1px;    
+  --slant: .5em;   
+  --color: #aec7e4; 
+  display: inline-block;
+  font-size: 30px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  margin: 10px 10px 10px 10px;
+  transition-duration: 0.3s;
+  background: 
+  linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
+  linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
+  background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+  background-repeat: no-repeat;
+  box-shadow:
+  0 0 0 200px inset var(--s,#0000),
+  0 0 0 var(--border) inset var(--color);
+  clip-path: 
+  polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+  100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+  );
+}
+.resume .base .follow .box i:focus-visible {
+  outline: var(--border) solid #000c;
+  clip-path: none;
+  background-size: 0 0;
+}
+
+.resume .func {
+  width: 100%;
+  padding: 30px 25px;
+  cursor: default;
+}
+.resume .func:hover > div {
+  transition-duration: 0.3s;
+}
+.resume .func:hover > div:hover h3 {
+  letter-spacing: 1.6px;
+}
+.resume .func:hover > div:hover h3 i {
+  transform: scale(1.2);
+  background-size: 100% 100%;
+  color: #000;
+ --t: 0.2s 0.1s;
+
+}
+.resume .func:hover > div:not(:hover) {
+  opacity: 0.5;
+}
+.resume .func h3 {
+  transition-duration: 0.3s;
+  margin-top: 0;
+}
+.resume .func h3 i {
+  --border: 1px;    
+  --slant: .5em;   
+  --color: #aec7e4; 
+  border: none;
+  width: 42px;
+  height: 42px;
+  font-size: 20px;
+  line-height: 42px;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: 8px;
+  transition-duration: 0.3s;
+  background: 
+  linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
+  linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
+  background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+  background-repeat: no-repeat;
+  box-shadow:
+  0 0 0 200px inset var(--s,#0000),
+  0 0 0 var(--border) inset var(--color);
+  clip-path: 
+  polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+  100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+  );
+}
+.resume .func h3 i:focus-visible {
+  outline-offset: calc(-1*var(--border));
+  outline: var(--border) solid #000c;
+  clip-path: none;
+  background-size: 0 0;
+}
+.resume .func h3 i:hover,
+.resume .func h3 i:active {
+  background-size: 100% 100%;
+  color: #000;
+ --t: 0.2s 0.1s;
+}
+.resume .func .work, .resume .func .edu {
+  float: left;
+}
+.resume .func .work small, .resume .func .edu small {
+  display: block;
+  opacity: 0.7;
+}
+.resume .func .work ul li, .resume .func .edu ul li {
+  position: relative;
+  margin-left: 15px;
+  padding-left: 25px;
+  padding-bottom: 15px;
+}
+.resume .func .work ul li:hover::before, .resume .func .edu ul li:hover::before {
+  animation: circle 1.2s infinite;
+}
+.resume .func .work ul li:hover span, .resume .func .edu ul li:hover span {
+  color: #aec7e4;
+}
+@keyframes circle {
+  from {
+    box-shadow: 0 0 0 0px #aec7e4;
+  }
+  to {
+    box-shadow: 0 0 0 6px rgba(61, 64, 91, 0);
+  }
+}
+.resume .func .work ul li:first-of-type::before, .resume .func .edu ul li:first-of-type::before {
+  width: 10px;
+  height: 10px;
+  left: -2px;
+}
+.resume .func .work ul li:last-of-type, .resume .func .edu ul li:last-of-type {
+  padding-bottom: 3px;
+}
+.resume .func .work ul li:last-of-type::after, .resume .func .edu ul li:last-of-type::after {
+  border-radius: 1.5px;
+}
+.resume .func .work ul li::before, .resume .func .work ul li::after, .resume .func .edu ul li::before, .resume .func .edu ul li::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+.resume .func .work ul li::before, .resume .func .edu ul li::before {
+  width: 7px;
+  height: 7px;
+  border: 3px solid #aec7e4;
+  background: #000;
+  border-radius: 50%;
+  left: 0;
+  z-index: 1;
+}
+.resume .func .work ul li::after, .resume .func .edu ul li::after {
+  width: 3px;
+  height: 100%;
+  background: #aec7e4;
+  left: 5px;
+  top: 0;
+}
+.resume .func .work ul li span, .resume .func .edu ul li span {
+  transition-duration: 0.3s;
+}
+.resume .func .work {
+  width: 42%;
+}
+.resume .func .edu {
+  width: 58%;
+}
+.resume .func .skills-prog {
+  clear: both;
+}
+.resume .func .skills-prog ul {
+  margin-left: 15px;
+}
+.resume .func .skills-prog ul li {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  transition-duration: 0.3s;
+}
+.resume .func .skills-prog ul li:hover {
+  color: #aec7e4;
+}
+.resume .func .skills-prog ul li small{
+  margin-bottom: 8px;
+  display: flex;
+  transition-duration: 0.3s;
+  position:absolute;
+  opacity: 0;
+  transition: all .3s;
+
+}
+.resume .func .skills-prog ul li:hover small {
+  color: #aec7e4;
+  opacity: 1;
+  margin-bottom: 20px;
+  cursor: default;
+}
+.resume .func .skills-prog ul li:hover .skills-bar .bar {
+  background: #aec7e4;
+  box-shadow: 0 0 0 1px #aec7e4;
+}
+.resume .func .skills-prog ul li span {
+  display: block;
+  width: 120px;
+}
+.resume .func .skills-prog ul li .skills-bar {
+  background: #000;
+  height: 2px;
+  width: calc(100% - 120px);
+  position: relative;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px #aec7e4;
+}
+.resume .func .skills-prog ul li .skills-bar .bar {
+  position: absolute;
+  top: -1px;
+  height: 4px;
+  background: #aec7e4;
+  box-shadow: 0 0 0 #aec7e4;
+  border-radius: 5px;
+}
+.resume .func .skills-soft ul {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.resume .func .skills-soft ul li {
+  position: relative;
+}
+.resume .func .skills-soft ul li:hover svg .cbar {
+  stroke: #aec7e4;
+  stroke-width: 4px;
+}
+.resume .func .skills-soft ul li:hover span, .resume .func .skills-soft ul li:hover small {
+  transform: scale(1.2);
+}
+.resume .func .skills-soft ul li svg {
+  width: 55%;
+  fill: transparent;
+  transform: rotate(-90deg);
+}
+.resume .func .skills-soft ul li svg circle {
+  stroke-width: .5px;
+  stroke: #fff;
+}
+.resume .func .skills-soft ul li svg .cbar {
+  stroke-width: 3px;
+  stroke: #aec7e4;
+  stroke-linecap: round;
+}
+.resume .func .skills-soft ul li span, .resume .func .skills-soft ul li small {
+  position: absolute;
+  display: block;
+  width: 100%;
+  top: 52%;
+  transition-duration: 0.3s;
+}
+.resume .func .skills-soft ul li span {
+  top: 40%;
+}
+.resume .func .interests-items {
+  box-sizing: border-box;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.resume .func .interests-items div {
+  display: inline-block;
+  width: 80px;
+  height: 60px;
+  
+}
+.resume .func .interests-items div:hover i {
+  transform: scale(1.2);
+}
+.resume .func .interests-items div:hover span {
+  color: #aec7e4;
+  transition-duration: 0.3s;
+}
+.resume .func .interests-items div i {
+  font-size: 40px;
+  width: 60px;
+  height: 65px;
+  line-height: 60px;
+  color: #aec7e4;
+  transition-duration: 0.3s;
+}
+
+.resume .func .interests-items div span {
+  display: block;
+}
+#scroll-top-btn {
+--border: 1px;    
+--slant: .5em;   
+--color: #aec7e4;
+	position:fixed;
+	bottom:-50px;
+	right:20px;
+	width:50px;
+	height:50px;
+	font-size:32px;
+	border:none;
+	color:var(--color);
+	transition:all 300ms ease-in-out, color var(--t,0.3s), background-size 0.3s;
+  background: 
+  linear-gradient(to bottom left,var(--color)  50%,#00000000 50.1%) top right,
+  linear-gradient(to top   right,var(--color)  50%,#00000000 50.1%) bottom left;
+background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+background-repeat: no-repeat;
+clip-path: 
+  polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+  100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+  );
+  box-shadow:
+  0 0 0 200px inset var(--s,#0000),
+  0 0 0 var(--border) inset var(--color);
+  z-index: 3;
+}
+#scroll-top-btn:focus-visible {
+  outline-offset: calc(-1*var(--border));
+ outline: var(--border) solid #000c;
+clip-path: none;
+background-size: 0 0;
+}
+#scroll-top-btn:hover,
+#scroll-top-btn:active {
+  background-size: 100% 100%;
+  color: #000;
+ --t: 0.2s 0.1s;
+}
+#scroll-top-btn.visible {
+	bottom:20px;
+}
+
+.contContainer {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  font-family: "Kode Mono", monospace;
+  font-weight: 700;
+}
+.contRow {
+  display: flex;
+}
+.selRow {
+  display: flex;
+}
+.contRowRad {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.editor-field {
+  width: 300px;
+  height: 64px;
+  position: relative;
+  margin: 14px ;
+}
+.dropSelect {
+  width: 100%;
+  height: 64px;
+  position: relative;
+  margin: 14px ;
+}
+.radiohead {
+  width: 100%;
+  height: 64px;
+  position: relative;
+  margin: 14px ;
+}
+.messageUsr {
+  width: 100%;
+  height: 150px;
+  position: relative;
+
+  margin: 14px ;
+}
+textarea {
+  resize: none;
+  height: 150px;
+  overflow-y: hidden;
+  font-weight: 500;
+  font-size: small;
+}
+
+
+
+
+
+.editor-field__container {
+  clip-path: polygon(0% 0%, calc(100% - 8px) 0, 100% 8px, 100% 100%, 95% 100%, calc(0% + 8px) 100%, 0% calc(100% - 8px), 0% calc(100% + 8px));
+  border: 1px solid #aec7e4;
+  width: 100%;
+  height: 48px;
+  position: absolute;
+  bottom: 2px;
+}
+.editor-field__container:before, .editor-field__container:after {
+  content: "";
+  height: 3px;
+  width: 11.5px;
+  background: #aec7e4;
+  display: block;
+  position: absolute;
+  z-index: 1;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  
+}
+
+.editor-field__container:before {
+  right: -3.1px;
+  top: 1.6px;
+}
+.editor-field__container:after {
+  left: -3.1px;
+  bottom: 1.6px;
+}
+.messUser {
+  clip-path: polygon(0% 0%, calc(100% - 8px) 0, 100% 8px, 100% 100%, 95% 100%, calc(0% + 8px) 100%, 0% calc(100% - 8px), 0% calc(100% + 8px));
+  border: 1px solid #aec7e4;
+  width: 100%;
+  height: 134px;
+  position: absolute;
+  bottom: 2px;
+}
+.messUser:before, .messUser:after {
+  content: "";
+  height: 3px;
+  width: 11.5px;
+  background: #aec7e4;
+  display: block;
+  position: absolute;
+  z-index: 1;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  
+}
+.messUser:before {
+  right: -3.1px;
+  top: 1.6px;
+}
+.messUser:after {
+  left: -3.1px;
+  bottom: 1.6px;
+}
+
+.editor-field__label-container {
+  position: absolute;
+  top: 0px;
+}
+
+.editor-field__label {
+  position: relative;
+  display: block;
+  height: 16px;
+  width: auto;
+  background: #aec7e4;
+  left: 0px;
+  color: #000;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.25px;
+  font-weight: 700;
+  padding: 0 24px 0 16px;
+  display: flex;
+  align-items: center;
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 100%, 0% 100%);
+}
+.editor-field__input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background:transparent;
+  color: #aec7e4;
+  padding: 8px 16px;
+  letter-spacing: 0.2px;
+  font-family: "Kode Mono", monospace;
+}
+
+
+
+
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.c-select-wrap {
+  width: 100%;
+  font-family: "Kode Mono", monospace;
+  top: 20px;
+  color: #aec7e4;
+  font-size: 12px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.c-select-wrap select {
+  display: none;
+}
+
+.c-select {
+  padding: 10px 20px;
+  cursor: pointer;
+  position: relative;
+ 
+  
+}
+
+.c-select::after {
+    content: "\EA4E" ;
+    position: absolute;
+    font-weight: 500;
+    font-family: 'RemixIcon';
+    transition: transform 0.3s ease;
+    right: 20px;
+
+    font-size:30px;
+    top:5px;  
+}
+
+.c-select.open::after {
+  transform: rotate(180deg);
+}
+
+
+
+.options {
+  --border: 1px;    
+  --slant: .5em;   
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 44px;
+  background: #000;
+  color: #fff;
+  font-size: 12px;
+  padding: 10px 20px;
+  font-family: "Kode Mono", monospace;
+  transform: scaleY(0);
+  z-index: 3;
+  transform-origin: top;
+  cursor: pointer;
+  transition: all .3s;
+  list-style: none;
+  clip-path: 
+  polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+  100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+  );
+}
+
+.options::before {
+  --color: #aec7e4;
+  content: '';
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background: 
+  linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
+  linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
+  background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+  background-repeat: no-repeat;
+  box-shadow:
+  0 0 0 200px inset var(--s,#0000),
+  0 0 0 var(--border) inset var(--color);
+  clip-path: 
+  polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+  100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+  );
+  }
+
+.option {
+  padding: 5px 0;
+}
+.option:hover {
+  padding: 5px 0;
+  color: #aec7e4;
+}
+
+.c-select.open + .options {
+  transform: scaleY(1);
+}
+
+.contRow .submiBut {
+
+  width: 100%;
+  position: relative;
+  margin: 14px ;
+  display: flex;
+  justify-content: end;
+}
+
+
+
+.radioOpt1, .radioOpt2 {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+
+}
+.radCon {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.radio {
+  display: inline-flex;
+  align-items: center;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.radio-radio {
+position: absolute; 
+  opacity: 0;
+}
+
+.radCircle {
+ width: 1.25em;
+height: 1.25em;
+  border: solid 1px #aec7e4;
+  border-radius: 50%;
+  margin-right: 10px;
+  box-sizing: border-box;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.radCircle::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: #aec7e4;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 0.15s;
+  cursor: pointer;
+}
+
+.radio-radio:checked + .radCircle::after {
+  transform: scale(1);
+}
+.radio-radio:checked + .radCircle + span {
+  color: #aec7e4;
+}
+
+.radio span {
+  color: #fff;
+}
+.radio span:hover {
+  color: #aec7e4;
+}
+.radiohead h5 {
+  color: #aec7e4;
+}
+
+.contSocials {
+
+  margin-top: 20px;
+  padding-top:10px ;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: max-content;
+  align-items: center;
+  width: 100%;
+}
+.contSocials .icons {
+  --border: 1px;    
+  --slant: .5em;   
+  --color: #aec7e4; 
+  color: #aec7e4;
+  height: 40px;
+  width: 40px;
+  margin: 0 8px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 17px;
+  text-decoration: none;
+  background: 
+  linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
+  linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
+  background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+  background-repeat: no-repeat;
+  box-shadow:
+  0 0 0 200px inset var(--s,#0000),
+  0 0 0 var(--border) inset var(--color);
+  clip-path: 
+  polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+  100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+  );
+  transition: color var(--t,0.3s), background-size 0.3s;
+  border: none;
+  margin: 5px 5px;
+  
+}
+
+.contSocials.icons:focus-visible {
+  outline-offset: calc(-1*var(--border));
+  outline: var(--border) solid #000c;
+  clip-path: none;
+  background-size: 0 0;
+}
+.contSocials .icons:hover,
+.contSocials .icons:active{
+   background-size: 100% 100%;
+  color: #000;
+  --t: 0.2s 0.1s;
+}
+.contSocials .icons :active {
+  --s: #0005;
+  transition: none;
+}
+
+.hehe {
+  margin-bottom: 20px;
+}
+.container1 .home1 .home1text3 .contactContact {
+  margin-bottom: 20px;
+}
+.container1 .home1 .home1text3 .contactContact div {
+  line-height: 24px;
+}
+.container1 .home1 .home1text3 .contactContact a {
+  text-decoration: none;
+  color: #fff;
+}
+.container1 .home1 .home1text3 .contactContact div a:hover, 
+.container1 .home1 .home1text3 .contactContact div a:hover > .fa-solid {
+  color: #aec7e4;
+}
+.container1 .home1 .home1text3 .contactContact div a:hover span::after {
+  width: 100%;
+}
+.container1 .home1 .home1text3 .contactContact div i {
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  text-align: center;
+  margin-right: 15px;
+  transition-duration: 0.3s;
+}
+.container1 .home1 .home1text3 .contactContact div span {
+  position: relative;
+}
+.container1 .home1 .home1text3 .contactContact div span::after {
+  content: "";
+  position: absolute;
+  background: #aec7e4;
+  height: 1px;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  transition-duration: 0.3s;
+}
+.container1 .home1 .home1text3 .contactContact > .call, .address, .email, .website {
+  font-size: 20px;
+  margin: .2em 0;
+}
+
+.contactGraphic{
+  --border: 1px;    
+  --slant: 5em;   
+  --color: #aec7e4; 
+
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  margin: auto;
+  right: 0;
+  align-items: center;
+  width: fit-content;
+  justify-content: center;
+  width: 100%;
+  clip-path: 
+  polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+  100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+  );
+
+}
+.contactGraphic::before {
+  content: '';
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background: 
+  linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
+  linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
+  background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+  background-repeat: no-repeat;
+  box-shadow:
+  0 0 0 200px inset var(--s,#0000),
+  0 0 0 var(--border) inset var(--color);
+  clip-path: 
+  polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+  100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+  );
+}
+
+.contactGraphic img {
+  height: 100%;
+  z-index: -2;
+}
+
+
+
+.aboutGraphic{
+  --border: 1px;    
+  --slant: 5em;   
+  --color: #aec7e4; 
+
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  margin: auto;
+  right: 0;
+  align-items: center;
+  width: fit-content;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+  clip-path: 
+  polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+  100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+  );
+
+}
+.aboutGraphic::before {
+  content: '';
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background: 
+  linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
+  linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
+  background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+  background-repeat: no-repeat;
+  box-shadow:
+  0 0 0 200px inset var(--s,#0000),
+  0 0 0 var(--border) inset var(--color);
+  clip-path: 
+  polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+  100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+  );
+}
+
+.aboutGraphic img {
+  height: 100%;
+  z-index: -2;
+}
+
+.aboutBlu {
+  color: #aec7e4;
+  font-size: larger;
+}
+.indent {
+  text-indent: 5%;
+  text-align: justify;
+  -ms-text-justify: inter-word;
+}
+.indent1 {
+  text-indent: 20%;
+  text-align: justify;
+  -ms-text-justify: inter-word;
+}
+
+.aboutButt {
+  --border: 1px;    
+  --slant: .5em;   
+  --color: #aec7e4; 
+  font-size: 20px;
+  width: 40%;
+  padding: 0.5em 1.2em;
+  align-self: flex-end;
+  text-decoration: none;
+  font-family: "Kode Mono", monospace;
+  border: none;
+  margin-top: 3em;
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--color);
+  text-align: center;
+  background:  linear-gradient(to bottom left,var(--color)  50%,#00000000 50.1%) top right,
+  linear-gradient(to top   right,var(--color)  50%,#00000000 50.1%) bottom left;
+  background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+  background-repeat: no-repeat;
+  box-shadow:
+    0 0 0 200px inset var(--s,#0000),
+    0 0 0 var(--border) inset var(--color);
+  clip-path: 
+    polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+    100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+    );
+  transition: color var(--t,0.3s), background-size 0.3s;
+}
+  
+  
+.aboutButt:focus-visible {
+  outline-offset: calc(-1*var(--border));
+  outline: var(--border) solid #000c;
+  clip-path: none;
+  background-size: 0 0;
+  }
+.aboutButt:hover,
+.aboutButt:active{
+  background-size: 100% 100%;
+   color: #000;
+  --t: 0.2s 0.1s;
+}
+.aboutButt:active {
+  --s: #0005;
+  transition: none;
+}
+  
+.aboutGap {
+  gap: 3em;
+}
+
+.aboutCheck {
+  --border: 1px;    
+  --slant: .5em;   
+  --color: #aec7e4; 
+  font-size:25px;
+  width: 30px;
+  padding: 0.5em;
+  text-decoration: none;
+  font-family: "Kode Mono", monospace;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--color);
+  text-align: center;
+  background:  linear-gradient(to bottom left,var(--color)  50%,#00000000 50.1%) top right,
+  linear-gradient(to top   right,var(--color)  50%,#00000000 50.1%) bottom left;
+  background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+  background-repeat: no-repeat;
+  box-shadow:
+    0 0 0 200px inset var(--s,#0000),
+    0 0 0 var(--border) inset var(--color);
+  clip-path: 
+    polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+    100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+    );
+  transition: color var(--t,0.3s), background-size 0.3s;
+}
+
+.alert {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+
+}
+.popup {
+  width: 400px;
+  background: rgba(0, 0, 0,  .9);
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  text-align: center;
+  padding: 0 30px 30px;
+  color: #fefefe;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s ease-in-out;
+  z-index: 1000;
+  font-family: "Kode Mono", monospace;
+  border: #aec7e4 solid .1em;
+}
+.popupbad {
+  width: 400px;
+  background: rgba(0, 0, 0,  .9)  ;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  text-align: center;
+  padding: 0 30px 30px;
+  color: #aec7e4;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s ease-in-out;
+  z-index: 1000;
+  font-family: "Kode Mono", monospace;
+  border: #aec7e4 solid .1em;
+}
+.open-popup {
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
+.open-popupbad {
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
+.popup img,
+.popupbad img {
+  --border: 1px;    
+  --slant: 2em;   
+  --color: #aec7e4; 
+  width: 250px;
+  margin-top: -120px;
+  background: #aec7e4;
+  
+  clip-path: 
+    polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+    100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+    );
+}
+
+.popup h2 {
+  font-size: 38px;
+  font-weight: 500;
+  margin: 6px 0 8px;
+}
+
+.popupbad h2 {
+  font-size: 33px;
+  font-weight: 500;
+  margin: 6px 0 8px;
+}
+
+.popup button,
+.popupbad button {
+--border: 1px;    
+--slant: .5em;   
+--color: #aec7e4; 
+  width: 100%;
+  margin-top: 50px;
+  padding: 10px 0;
+  background: 
+  linear-gradient(to bottom left,var(--color)  50%,#00000000 50.1%) top right,
+  linear-gradient(to top   right,var(--color)  50%,#00000000 50.1%) bottom left;
+  background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+  background-repeat: no-repeat;
+  color: var(--color);
+  border: none;
+  outline: none;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow:
+  0 0 0 200px inset var(--s,#0000),
+  0 0 0 var(--border) inset var(--color);
+  font-family: "Kode Mono", monospace;
+  clip-path: 
+  polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+  100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+  );
+  transition: color var(--t,0.3s), background-size 0.3s;
+}
+.popup button:focus-visible,
+.popupbad button:focus-visible {
+  outline-offset: calc(-1*var(--border));
+   outline: var(--border) solid #000c;
+  clip-path: none;
+  background-size: 0 0;
+  }
+.popup button:hover,
+.popupbad button:hover,
+.popup button:active,
+.popupbad button:active {
+  background-size: 100% 100%;
+  color: #000;
+ --t: 0.2s 0.1s;
+}
+.popup button:active,
+.popupbad button:active {
+  --s: #0005;
+  transition: none;
+  }
+
+.regblur {
+  pointer-events: none;
+  user-select: none;
+  z-index:1000;
+  height: 100vh;
+  position: fixed;
+  background:rgba(0, 0, 0, .9);
+  display: absolute;
+  cursor: default;
+  height: 100vh;
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin: 0%;
+
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: 999; /* Ensure the overlay is above other elements */
+}
+.no-pointer-events {
+  pointer-events: none;
+}
+.contactCon {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+  z-index: 1000;
+  overflow: visible;
+  display: absolute;
+  justify-self: end;
+  align-self: center;
+  position:fixed;
+  bottom: 0%;
+  top: 0%;
+  pointer-events: none;
+  cursor: default;
+}
+.backdrop {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+  z-index: 1000;
+  overflow: visible;
+  display: absolute;
+  justify-self: end;
+  align-self: center;
+  position:fixed;
+  bottom: 0%;
+  top: 0%;
+  pointer-events: none;
+  cursor: default;
+}
+.product{
+  --border: 1px;    
+  --slant: 2em;   
+  --color: #aec7e4; 
+  background-color: rgba(0, 0, 0,  .9);
+  max-height: 100rem;
+  margin:0px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  justify-self: center;
+  padding-top: 0;
+  width: 18rem;
+  clip-path: 
+  polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+  100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+  );
+}
+.product::before {
+  content: '';
+  position:absolute;
+  inset:0;
+  z-index:0;
+  background: 
+  linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
+  linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
+  background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+  background-repeat: no-repeat;
+  box-shadow:
+  0 0 0 200px inset var(--s,#0000),
+  0 0 0 var(--border) inset var(--color);
+  clip-path: 
+  polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+  100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+  );
+  }
+
+.products {
+ margin-top: 2em;
+ display: flex;
+ position: relative;
+ flex-direction: row;
+ padding:0;
+  width: 95%;
+  justify-content: center;
+}
+.thumbnail{
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  z-index: -2;
+  filter: blur(5px);
+  
+}
+.product-info{
+  padding: .5rem 2rem 2rem 2rem;
+  text-justify: inter-word;
+  font-family: "Kode Mono", monospace;
+  border-top: #aec7e4 solid .1em;
+
+}
+
+.product-info button {
+--border: 1px;    
+--slant: .5em;   
+--color: #aec7e4; 
+  margin-top: 1rem;
+  padding: .5rem 1.2rem;
+  background: 
+  linear-gradient(to bottom left,var(--color)  50%,#00000000 50.1%) top right,
+  linear-gradient(to top   right,var(--color)  50%,#00000000 50.1%) bottom left;
+  background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+  background-repeat: no-repeat;
+  color: var(--color);
+  border: none;
+  outline: none;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow:
+  0 0 0 200px inset var(--s,#0000),
+  0 0 0 var(--border) inset var(--color);
+  font-family: "Kode Mono", monospace;
+  clip-path: 
+  polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+  100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+  );
+  transition: color var(--t,0.3s), background-size 0.3s;
+}
+.product-info button:focus-visible {
+  outline-offset: calc(-1*var(--border));
+   outline: var(--border) solid #000c;
+  clip-path: none;
+  background-size: 0 0;
+}
+ 
+.product-info button:hover,
+.product-info button:active {
+  background-size: 100% 100%;
+  color: #000;
+ --t: 0.2s 0.1s;
+}
+
+.product-info button:active {
+  --s: #0005;
+  transition: none;
+}
+.view {
+  display: flex;
+  margin: 0%;
+  justify-content: end;
+}  
+.pTex {
+  margin: .8rem 0rem;
+}
+
+.filter_type {
+  color: #aec7e4;
+  border: #aec7e4 solid .1em;
+  width: fit-content;
+  padding: 0% .2em;
+}
+.title {
+  font-size: 25px;
+  color: #aec7e4;
+}
+.portcontainer1 {
+  position: relative;
+  margin: 8.5rem 5% 150% 5% ;
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+  inset: 0;
+  z-index: 1;
+  scroll-snap-align: center;
+  overflow: visible;
+}
+
+.button-group-wrap {
+  border-bottom: solid #aec7e4 .1em;
+  position: relative;
+  margin:auto;
+  padding: 15px;
+  padding-bottom: 30px;
+}
+.button-group-wrap button {
+  --border: 1px;    
+  --slant: .5em;   
+  --color: #aec7e4; 
+    margin: 0 1rem;
+    margin-top: 1rem;
+    padding: .5rem 1.2rem;
+    background: 
+    linear-gradient(to bottom left,var(--color)  50%,#00000000 50.1%) top right,
+    linear-gradient(to top   right,var(--color)  50%,#00000000 50.1%) bottom left;
+    background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+    background-repeat: no-repeat;
+    color: var(--color);
+    border: none;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow:
+    0 0 0 200px inset var(--s,#0000),
+    0 0 0 var(--border) inset var(--color);
+    font-family: "Kode Mono", monospace;
+    clip-path: 
+    polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+    100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+    );
+    transition: color var(--t,0.3s), background-size 0.3s;
+}
+.button-group-wrap  button:focus-visible {
+  outline-offset: calc(-1*var(--border));
+   outline: var(--border) solid #000c;
+  clip-path: none;
+  background-size: 0 0;
+}
+.button-group-wrap  button:hover,
+.button-group-wrap button:active,
+.button-group-wrap button.active {
+  background-size: 100% 100%;
+  color: #000;
+ --t: 0.2s 0.1s;
+}
+.button-group-wrap button:active {
+  --s: #0005;
+  transition: none;
+}
+.button-group-wrap button.active {
+  background: #aec7e4;
+  color: #000;
+}
+
+
+.portfolio .products .product_product .popup-view {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  transform: translate(-50%, -50%) scale(0.1);  
+  top: 0;
+  visibility: hidden;
+  z-index: 1000;
+  transition: transform 0.4s, top 0.4s ease-in-out;
+}
+
+.popup-card {
+  --border: 1px;    
+  --slant: 5em;   
+  --color: #aec7e4; 
+  width: 1600px;
+  background: rgba(0, 0, 0,  .9);
+  position: fixed;
+
+  left: 50%;
+  transform: translate(-50%, 0%) ;
+  overflow: hidden;
+  padding: 0;
+  color: #fefefe;
+
+  
+  z-index: 1000;
+  font-family: "Kode Mono", monospace;
+  display: flex;
+  height: 800px;
+  overflow: hidden;
+  clip-path: 
+  polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+  100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+  );
+}
+
+.popup-card::before {
+  content: '';
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background: 
+  linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
+  linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
+  background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+  background-repeat: no-repeat;
+  box-shadow:
+  0 0 0 200px inset var(--s,#0000),
+  0 0 0 var(--border) inset var(--color);
+  clip-path: 
+  polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+  100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+  );
+}
+.product-img{
+  width: max-content;
+  height: 100%;
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  
+  border-right: solid #aec7e4 .1em;
+}
+.code-wrapper{
+  width: 100%;
+  height: 100%;
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  padding: 15px;
+  border-right: solid #aec7e4 .1em;
+  position: relative;
+  
+}
+
+
+.product-img img{
+  object-fit: cover;
+  z-index: -2;
+  
+}
+.product-img video{
+  object-fit: cover;
+  z-index: 0;
+}
+ .portfolio .products .product_product .popup-view.active {
+  visibility: visible;
+  /* top: 50%; */
+  transform: translate(-50%, 0%) scale(1);
+  z-index: 1000;
+}
+.popup-info {
+  /* height: 100%; */
+  padding: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  width: 45%;
+}
+
+.popup-info h2{
+  margin: 0px;
+  color: #aec7e4;
+  font-size: 45px;
+  text-align: left;
+}
+.popup-info .poopoo{
+  margin-top: 15px;
+  text-align: left;
+  text-indent: 10%;
+  text-justify: newspaper;
+  font-size: 20px;
+}
+
+.closeer {
+  font-size: 40px;
+  position: fixed;
+  z-index: 2000;
+  transform: translate(760px, -360px);
+  position: absolute;
+  cursor: pointer;
+  --border: 1px;    
+  --slant: .5em;   
+  --color: #aec7e4; 
+  color: #aec7e4;
+  height: 40px;
+  width: 40px;
+  margin: 0 8px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 17px;
+  text-decoration: none;
+  background-color: #000;
+  clip-path: 
+    polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+    100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+  );
+  position: relative;
+}
+
+.closeer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(to bottom left,var(--color) 50%,#0000 50.1%) top right,
+    linear-gradient(to top right,var(--color) 50%,#0000 50.1%) bottom left;
+  background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+  background-repeat: no-repeat;
+  box-shadow:
+    0 0 0 200px inset var(--s,#0000),
+    0 0 0 var(--border) inset var(--color);
+  clip-path: 
+    polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+    100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+  );
+  transition: background-size 0.3s, color 0.3s; 
+}
+
+
+.closeer .close-btn {
+  position: relative;
+  z-index: 2; 
+  transition: color 0.3s;
+}
+.closeer .close-btn:hover {
+  position: relative;
+  z-index: 2; 
+  transition: color 0.3s;
+  color: #000;
+}
+
+.closeer:hover::before,
+.closeer:active::before {
+  background-size: 100% 100%;
+  color: #000; 
+}
+.closeer:hover,
+.closeer:active {
+  background-size: 100% 100%;
+  color: #000; 
+}
+
+.closeer:focus-visible {
+  outline-offset: calc(-1*var(--border));
+  outline: var(--border) solid #000c;
+  clip-path: none;
+  background-size: 0 0;
+}
+
+.closeer:active {
+  --s: #0005;
+  transition: none;
+}
+
